@@ -1,1 +1,1 @@
-(Link)[https://alstn-movie.netlify.app/]
+[Link](https://alstn-movie.netlify.app/)
