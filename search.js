@@ -13,12 +13,14 @@ function filteredMovies(event) {
 
   movieCards.forEach(card => {
     const title = card.querySelector('h1').textContent.toLowerCase();
-    if (title.includes(searchResult)) {
-      card.style.display = 'block'; // searchResult 포함하면 표시
+    if (title.includes(searchResult.toLowerCase())) {
+      card.style.display = 'block'; // searchResult 포함하면 표시 / 아니면반대
     } else {
       card.style.display = 'none'; 
     }
-    searchInput.value = "";
+
+ 
+    
   });
 }
 searchForm.addEventListener("submit", filteredMovies);

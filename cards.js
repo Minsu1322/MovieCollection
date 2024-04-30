@@ -12,7 +12,6 @@ function displayMovies(movies) {
           <h1>${movie.title}</h1>
           <p>${movie.overview}</p>
           <p>평점: ${movie.vote_average}</p>
-        
       </div>
     `;
     movieList.innerHTML += movieCard;
@@ -27,6 +26,6 @@ function displayMovies(movies) {
   });
 }
 
-function alertMovie(movieId) {
+const  alertMovie = (movieId) => {
   alert(`영화 id : ${movieId}`);
 }
