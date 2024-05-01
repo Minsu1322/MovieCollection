@@ -18,9 +18,6 @@ function filteredMovies(event) {
     } else {
       card.style.display = 'none'; 
     }
-
- 
-    
   });
 }
 searchForm.addEventListener("submit", filteredMovies);
