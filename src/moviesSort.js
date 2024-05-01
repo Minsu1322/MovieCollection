@@ -1,9 +1,9 @@
-import { displayMovies } from "./displayMovies";
+// import { displayMovies } from "./displayMovies";
 
 export const moviesSort = () => {
   const $sort = document.querySelector("#sort");
-  const {$title, $score} = displayMovies();
-  console.log($title);
+  // const {$title, $score} = displayMovies();
+  // console.log($title);
 
   $sort.addEventListener("change", (e) => {
     if (e.target.value === "name") {
