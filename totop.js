@@ -6,3 +6,4 @@ arrowBtn.addEventListener('click', () => {
     behavior: "smooth"
   })
 });
+
