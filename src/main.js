@@ -1,6 +1,7 @@
 import { displayMovies } from "./displayMovies.js";
 import { toTheTop } from "./toTheTop.js";
 import { searchMovies } from "./searchMovies.js";
+import { moviesSort } from "./moviesSort.js";
 
 // const cards = movieList.querySelectorAll(".card");
 //   cards.forEach((card, index) => {
@@ -13,3 +14,4 @@ import { searchMovies } from "./searchMovies.js";
 displayMovies();
 searchMovies();
 toTheTop();
+moviesSort();
