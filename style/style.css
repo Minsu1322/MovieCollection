@@ -1,15 +1,15 @@
 *{
-  background-color: #E9E0CA;
+  background-color: bisque;
 
 }
 /* 헤더영역 */
-#logo div{
+#logo div {
   text-align: center;
   margin-left: auto;
-  border: 6px dashed;
+  border: 5px  dashed;
 }
 
-#logo span{
+#logo span {
   margin-top: 20px;
   width: 100%;
   font-family: "Jersey 15", sans-serif;
@@ -18,14 +18,14 @@
 }
 
 /* 검색영역 & 버튼 */
-#search-section div{
+#search-section div {
   border-style: none;
   margin-top: 20px;
   text-align: center;
   margin-bottom: 80px;
 }
 
-.search-btn{
+.search-btn {
   border-radius: 5px;
   background-color: bisque;
   padding: 5px;
@@ -33,13 +33,13 @@
   font-weight: bolder;
 }
 
-label{
+label {
   font-size: 20px;
   font-weight: bolder;
   margin-right: 10px;
 }
 
-#search-section input{
+#search-section input {
   border-radius: 10px;
   width: 300px;
   height: 30px;
@@ -49,13 +49,13 @@ label{
 }
 
 /* 영화목록들 */
-#movie-cards{
+#movie-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.card{
+.card {
   border-radius: 10px;
   padding: 10px;
   margin: 50px;
@@ -68,27 +68,25 @@ label{
   transition: scale 0.45s;
   background-color: #3C8E84;
 }
-.card:hover{
+.card:hover {
   scale: 120%;
 }
 
-img{
+img {
   width: 300px;
   height: auto;
   border-radius: 10px;
 }
 
-.card h1{
-font-size: 23px;
-background-color: transparent;
-}
-
-.card p{
-  font-size: 17px;
+.card h1 {
+  font-size: 23px;
   background-color: transparent;
 }
 
-
+.card p {
+  font-size: 17px;
+  background-color: transparent;
+}
 
 /* 위로 */
 .arrowBtn {
@@ -105,4 +103,16 @@ background-color: transparent;
   align-items: center;
   text-align: center;
   font-size: 16px;
+}
+
+footer {
+  margin-top: 40px;
+  height: 15vh;
+  line-height: 5px;
+  text-align: center;
+  align-content: center;
+}
+
+footer p {
+  font-size: 12px;
 }

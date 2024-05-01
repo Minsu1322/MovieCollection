@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/detail.css" />
+    <link rel="stylesheet" href="./style/detail-review.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,16 +36,35 @@
       </form>
     </header>
     <!-- 상세설명 -->
-    <section></section>
+    <section id="detail-screen">
+      <div>
+        
+      </div>
+    </section>
 
     <!-- 리뷰영역 -->
-    <section>
-      <form>
-        작성자: <input type="text" /> 비밀번호: <input type="password" />
-        <textarea name="" id="" cols="60" rows="8"></textarea>
-        <button>작성</button>
+    <section id="review-section">
+      <form id="review-form">
+        <div id="review-info">
+          <label for="review-id">아이디 : </label>
+          <input class=review-id type="text" />
+
+          <label for="review-password">비밀번호 : </label>
+          <input class="review-password" type="password" />
+        </div>
+
+        <div>
+          <textarea class="textArea" name="" id="" cols="60" rows="8"></textarea>
+        </div>
+        <button class="btn">작성</button>
+
       </form>
-      <div class="review-list"></div>
+
+
+
+      <div class="review-list">
+
+      </div>
     </section>
     <footer>
       <p>탕수육조 Tangsoo6</p>
