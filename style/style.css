@@ -3,6 +3,7 @@
 }
 /* 헤더영역 */
 #logo div {
+<<<<<<< HEAD
   border-style: dashed;
   margin-top: 20px;
   width: 100%;
@@ -10,12 +11,29 @@
   text-align: center;
   font-family: 'Jersey 15', sans-serif;
   font-weight: 00;
+=======
+  text-align: center;
+  margin-left: auto;
+  border: 5px dashed;
+}
+
+#logo span {
+  margin-top: 20px;
+  width: 100%;
+  font-family: "Jersey 15", sans-serif;
+>>>>>>> 1af5df86e535ae6f4d96d57ec15698dd96666a50
   font-style: normal;
+  font-size: 70px;
 }
 
 /* 검색영역 & 버튼 */
 #search-section div {
+<<<<<<< HEAD
   margin-top: 50px;
+=======
+  border-style: none;
+  margin-top: 20px;
+>>>>>>> 1af5df86e535ae6f4d96d57ec15698dd96666a50
   text-align: center;
   margin-bottom: 80px;
 }
@@ -98,4 +116,38 @@ img {
   align-items: center;
   text-align: center;
   font-size: 16px;
+}
+
+.detail-container {
+  border: 3px solid green;
+  margin: 10px 150px;
+  display: flex;
+}
+
+.detail-container img {
+  width: 400px;
+  margin-right: 20px;
+}
+
+.detail-container .title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.review-container {
+  border: 3px solid blueviolet;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: 40px;
+  height: 15vh;
+  line-height: 5px;
+  text-align: center;
+  align-content: center;
+}
+
+footer p {
+  font-size: 12px;
 }

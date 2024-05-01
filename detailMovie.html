@@ -1,35 +1,66 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="stylesheet" href="/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
-  <title>project1</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
+      rel="stylesheet"
+    />
+    <title>project1</title>
+  </head>
 
-<body>
+  <body>
+    <!-- 헤더영역 -->
+    <header id="logo">
+      <div>
+        <span id="home">Movie-Collection</span>
+      </div>
 
-  <!-- 헤더영역 -->
-  <section id="logo">
-    <div>
-      <span id="home">Movie-Collection</span>
-    </div>
-  </section>
+      <!-- 영화 검색 -->
+      <form id="search-section">
+        <div>
+          <label for="search-section-movie">영화검색</label>
+          <input
+            id="search-section-movie"
+            type="text"
+            placeholder="제목을 입력해주세요!"
+          />
+          <button id="search-btn">검색</button>
+        </div>
+      </form>
+    </header>
+    <!-- 상세설명 -->
+    <section class="detail-container">
+      <img src="./images/basic_poster.jpg" alt="" />
+      <div>
+        <p class="title">영화 제목</p>
+        <p>개봉일</p>
+        <p>평점: 5점</p>
+        <p>관객 수: 10만 명</p>
+        <p>줄거리</p>
+      </div>
+    </section>
 
-  
- <!-- 상세설명 -->
-  <section>
-   
-  </section>
-
-
-
-<!-- 리뷰영역 -->
-  <section>
-
-  </section>
-</body>
+    <!-- 리뷰영역 -->
+    <section class="review-container">
+      <form>
+        작성자: <input type="text" /> 비밀번호: <input type="password" />
+        <textarea name="" id="" cols="60" rows="8"></textarea>
+        <button>작성</button>
+      </form>
+      <div class="review-list"></div>
+    </section>
+    <footer>
+      <p>탕수육조 Tangsoo6</p>
+      <p>유수지 곽현정 김민수 김현진 이보영 황승현</p>
+      <p>phone: 010-1234-5678</p>
+      <p>email: Tangsoo6@Sparta.com</p>
+      <br />
+      <p>copyright ⓒ Tangsoo6 All right reserved.</p>
+    </footer>
+  </body>
 </html>
