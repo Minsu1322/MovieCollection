@@ -48,6 +48,14 @@ label {
   font-weight: bolder;
 }
 
+select {
+  float: right;
+  margin-right: 10px;
+  height: 30px;
+  width: 90px;
+  font-size: 15px;
+}
+
 /* 영화목록들 */
 #movie-cards {
   display: flex;

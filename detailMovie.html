@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
       rel="stylesheet"
     />
+
+    <script type="module" src="./src/detailMain.js"></script>
     <title>project1</title>
   </head>
 
@@ -49,18 +51,30 @@
     <!-- 리뷰영역 -->
     <section class="review-container">
       <form id="review-form">
-        작성자: <input type="text" /> 
-        비밀번호: <input type="password" />
+        <label for="reviewId">작성자</label>
+        <input id = reviewId type="text" /> 
+
+        <label for="reviewPW">비밀번호</label>
+        <input id = reviewPW type="password" />
+
         <textarea id="review-text" name="" cols="60" rows="8"></textarea>
         <button class="btn">작성</button>
       </form>
 
-
-
+      <!-- 리뷰리스트 -->
       <div class="review-list">
 
       </div>
     </section>
+
+
+    <!-- 화살표 -->
+    <button class="arrowBtn">
+      top
+      <i class="arrow-up"></i>
+    </button>
+
+
     <footer>
       <p>탕수육조 Tangsoo6</p>
       <p>유수지 곽현정 김민수 김현진 이보영 황승현</p>
