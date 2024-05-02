@@ -13,7 +13,7 @@ export const review = () => {
   let arr = [];
 
   function addReview() {
-    const reviewText = document.querySelector("#reviewText");
+    const reviewText = document.querySelector("#review-text");
     const reviewId = document.querySelector("#reviewId");
     // const reviewPassword = document.querySelector("#reviewPW");
 
