@@ -3,7 +3,7 @@ import { handleReview } from "./handleReview.js";
 import { toTheTop } from "./toTheTop.js";
 import { review } from "./review.js";
 import { detailInfo } from "./detailInfo.js";
-review();
+//review();
 searchMovies();
 toTheTop();
 handleReview();
