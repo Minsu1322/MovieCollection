@@ -1,6 +1,5 @@
-*{
+* {
   background-color: bisque;
-
 }
 
 a {
@@ -17,10 +16,10 @@ a {
 #logo div {
   text-align: center;
   margin-left: auto;
-  border: 5px  dashed;
+  border: 5px dashed;
 }
 
-#logo span {
+#logo #home {
   margin-top: 20px;
   width: 100%;
   font-family: "Jersey 15", sans-serif;
@@ -85,7 +84,7 @@ select {
   font-style: normal;
   box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7);
   transition: scale 0.45s;
-  background-color: #3C8E84;
+  background-color: burlywood;
 }
 .card:hover {
   scale: 120%;
@@ -124,21 +123,7 @@ img {
   font-size: 16px;
 }
 
-.detail-container {
-  border: 3px solid green;
-  margin: 10px 150px;
-  display: flex;
-}
 
-.detail-container img {
-  width: 400px;
-  margin-right: 20px;
-}
-
-.detail-container #detail-title {
-  font-size: 30px;
-  font-weight: bold;
-}
 
 .review-container {
   border: 3px solid blueviolet;
@@ -157,3 +142,4 @@ footer {
 footer p {
   font-size: 12px;
 }
+

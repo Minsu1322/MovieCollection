@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/style.css" />
+    <!-- <link rel="stylesheet" href="./style/style.css" /> -->
+    <link rel="stylesheet" href="./style/detail.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
       rel="stylesheet"
     />
+  
 
     <script type="module" src="./src/detailMain.js"></script>
     <title>project1</title>
@@ -19,7 +21,7 @@
     <!-- 헤더영역 -->
     <header id="logo">
       <div>
-        <span id="home">Movie-Collection</span>
+        <a href="./index.html" id="home">Movie-Collection</a>
       </div>
 
       <!-- 영화 검색 -->
@@ -38,9 +40,9 @@
 
     <!-- 상세설명 -->
     <section class="detail-container">
-      <img id="detail-poster" src="./images/basic_poster.jpg" alt="" />
+      <img id="detail-poster" alt="" />
       <div>
-        <p id="detail-title">영화 제목</p>
+        <p id="detail-title"></p>
         <p id="detail-release">개봉일</p>
         <p id="detail-average">평점: 5점</p>
         <p id="detail-popular">관객 수: 10만 명</p>
