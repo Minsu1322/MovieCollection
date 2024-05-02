@@ -11,5 +11,17 @@ export const detailInfo = async () => {
     return obj;
   }, {});
 
+  
+
+  document.getElementById("detail-poster").setAttribute("src", `https://image.tmdb.org/t/p/w500${movieObj.backdrop_path}`);
+  document.getElementById("detail-title").innerHTML = movieObj.title;
+  document.getElementById("detail-release").innerHTML = movieObj.release_date;
+  document.getElementById("detail-average").innerHTML = movieObj.vote_average;
+  document.getElementById("detail-popular").innerHTML = movieObj.vote_count;
+  document.getElementById("detail-overview").innerHTML = movieObj.overview;
+
+
+
   console.log(movieObj);
-};
+
+}
