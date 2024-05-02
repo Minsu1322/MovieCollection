@@ -19,6 +19,7 @@ export const searchMovies = () => {
         card.style.display = "none";
       }
     });
+    
   }
   searchForm.addEventListener("submit", filteredMovies);
 };
