@@ -103,39 +103,74 @@ footer p {
 
 .detail-container {
   border: 3px solid green;
-  margin: 10px 150px;
+  margin: 10px 200px;
   display: flex;
+  /* overflow-y: scroll; */
+  height: 800px;
 }
 
 .detail-container img {
-  width: 400px;
-  margin-right: 20px;
+    width: 400px;
+    /* height: 500px; */
+    margin-right: 20px;
+}
+#detail-poster {
+    width: 400px;
+    height: 500px;
+    margin-right: 20px;
 }
 
-.detail-container #detail-title {
-  font-size: 30px;
-  font-weight: bold;
-}
+
 .movieinf {
   display: flex;
   font-weight: bold;
 }
 #detail-title {
+    font-size: 50px;
   font-family: impact, Charcoal, sans-serif;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  
 }
-
+#detail-poster {
+    border-radius: 30px;
+    border: 10px solid white;
+    margin-left: 125px;
+  }
 .movieinfo {
-  display: flex;
-  font-size: small;
+ 
+  font-size:110%;
   font-weight: bold;
+
 }
 
 #detail-release,
 #detail-popular {
-  margin-left: 2%;
+  /* margin-left: 3%; */
 }
 
 #detail-overview {
   font-family: Arial, sans-serif;
-  font-size: smaller;
+  font-size: 110%;
+  /* font-weight: bold; */
+  
+  margin-right: 150px;
+  margin-top: 30px;
+  
+}
+#detail-poster2 {
+    /* position: absolute; */
+    top: 605px;
+    border-radius: 30px;
+    border: 5px solid white;
+  }
+#clip {
+    margin-top: 40px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    font-size: small;
+    font-weight: bold;
+}
+.movieclip{
+    
 }
