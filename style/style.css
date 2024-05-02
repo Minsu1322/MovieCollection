@@ -1,11 +1,12 @@
-* {
+*{
   background-color: bisque;
+
 }
 /* 헤더영역 */
 #logo div {
   text-align: center;
   margin-left: auto;
-  border: 5px dashed;
+  border: 5px  dashed;
 }
 
 #logo span {
@@ -73,7 +74,7 @@ select {
   font-style: normal;
   box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7);
   transition: scale 0.45s;
-  background-color: burlywood;
+  background-color: #3C8E84;
 }
 .card:hover {
   scale: 120%;
