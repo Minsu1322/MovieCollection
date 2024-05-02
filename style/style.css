@@ -1,6 +1,5 @@
-*{
+* {
   background-color: bisque;
-
 }
 
 a {
@@ -17,10 +16,10 @@ a {
 #logo div {
   text-align: center;
   margin-left: auto;
-  border: 5px  dashed;
+  border: 5px dashed;
 }
 
-#logo span {
+#logo #home {
   margin-top: 20px;
   width: 100%;
   font-family: "Jersey 15", sans-serif;
@@ -85,7 +84,7 @@ select {
   font-style: normal;
   box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7);
   transition: scale 0.45s;
-  background-color: #3C8E84;
+  background-color: burlywood;
 }
 .card:hover {
   scale: 120%;
