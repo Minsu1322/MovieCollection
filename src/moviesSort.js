@@ -1,36 +1,35 @@
-// fetchMovieAPI() 함수가 필요하다..
+import { fetchMovieAPI } from "./fetchMovieAPI.js";
 
 export const moviesSort = async () => {
+  const movieInfo = await fetchMovieAPI();
   const $movieList = document.querySelector("#movie-list #movie-cards");
   const $sort = document.querySelector("#sort");
-  const movieInfo = await fetchMovieAPI();
 
   $sort.addEventListener("change", (e) => {
     $movieList.innerHTML = "";
+    let sortedMovieInfo = [];
+
     if (e.target.value === "name") {
       const titleSortArr = movieInfo.map((movie) => movie.title).sort();
-      console.log(titleSortArr);
       // 여기서 titleSort에 있는 순서대로 영화 카드를 보여줘야 함
-      let sortedMovieInfo = [];
       for (let i = 0; i < titleSortArr.length; i++) {
-        sortedMovieInfo = movieInfo.filter(
-          (movie) => movie.title === titleSortArr[i]
-        );
+        movieInfo.forEach((movie) => {
+          if (movie.title === titleSortArr[i]) sortedMovieInfo.push(movie);
+        });
       }
     } else if (e.target.value === "score") {
       const scoreSortArr = movieInfo
-        .map((movie) => movie.score)
+        .map((movie) => [movie.vote_average, movie.title])
         .sort()
         .reverse();
-      console.log(scoreSortArr);
       // 여기서 scoreSort에 있는 순서대로 영화 카드를 보여줘야 함
-      let sortedMovieInfo = [];
       for (let i = 0; i < scoreSortArr.length; i++) {
-        sortedMovieInfo = movieInfo.filter(
-          (movie) => movie.vote_average === scoreSortArr[i]
-        );
+        movieInfo.forEach((movie) => {
+          if (movie.title === scoreSortArr[i][1]) sortedMovieInfo.push(movie);
+        });
       }
     }
+
     $movieList.innerHTML = sortedMovieInfo
       .map(
         (movie) => `
