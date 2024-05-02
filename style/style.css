@@ -123,21 +123,7 @@ img {
   font-size: 16px;
 }
 
-.detail-container {
-  border: 3px solid green;
-  margin: 10px 150px;
-  display: flex;
-}
 
-.detail-container img {
-  width: 400px;
-  margin-right: 20px;
-}
-
-.detail-container #detail-title {
-  font-size: 30px;
-  font-weight: bold;
-}
 
 .review-container {
   border: 3px solid blueviolet;
@@ -156,3 +142,4 @@ footer {
 footer p {
   font-size: 12px;
 }
+

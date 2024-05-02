@@ -12,7 +12,7 @@ export const detailInfo = async () => {
   }, {});
 
   
-
+console.log(movieObj)
   document.getElementById("detail-poster").setAttribute("src", `https://image.tmdb.org/t/p/w500${movieObj.backdrop_path}`);
   document.getElementById("detail-title").innerHTML = movieObj.title;
   document.getElementById("detail-release").innerHTML = movieObj.release_date;
