@@ -1,161 +1,153 @@
 * {
-    background-color: bisque;
-  }
-  
-  a {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    text-decoration: none;
-    color: black;
-  }
-  
-  /* 헤더영역 */
-  #logo div {
-    text-align: center;
-    margin-left: auto;
-    border: 5px dashed;
-  }
-  
-  #logo #home {
-    margin-top: 20px;
-    width: 100%;
-    font-family: "Jersey 15", sans-serif;
-    font-style: normal;
-    font-size: 70px;
-  }
-  
-  /* 검색영역 & 버튼 */
-  #search-section div {
-    border-style: none;
-    margin-top: 20px;
-    text-align: center;
-    margin-bottom: 80px;
-  }
-  
-  .search-btn {
-    border-radius: 5px;
-    background-color: bisque;
-    padding: 5px;
-    text-align: center;
-    font-weight: bolder;
-  }
-  
-  label {
-    font-size: 20px;
-    font-weight: bolder;
-    margin-right: 10px;
-  }
-  
-  #search-section input {
-    border-radius: 10px;
-    width: 300px;
-    height: 30px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bolder;
-  }
-  
-  select {
-    float: right;
-    margin-right: 10px;
-    height: 30px;
-    width: 90px;
-    font-size: 15px;
-  }
-  
-  /* 영화목록들 */
-  #movie-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .card {
-    border-radius: 10px;
-    padding: 10px;
-    margin: 50px;
-    width: 300px;
-    text-align: center;
-    font-family: "Jersey 15", sans-serif;
-    font-weight: 150;
-    font-style: normal;
-    box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7);
-    transition: scale 0.45s;
-    background-color: burlywood;
-  }
-  .card:hover {
-    scale: 120%;
-  }
-  
-  img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .card h1 {
-    font-size: 23px;
-    background-color: transparent;
-  }
-  
-  .card p {
-    font-size: 17px;
-    background-color: transparent;
-  }
-  
-  /* 위로 */
-  .arrowBtn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: auto;
-  
-    display: flex;
-    position: sticky;
-    bottom: 20px;
-    right: 10px;
-  
-    align-items: center;
-    text-align: center;
-    font-size: 16px;
-  }
-  
-  
-  
-  .review-container {
-    border: 3px solid blueviolet;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  footer {
-    margin-top: 40px;
-    height: 15vh;
-    line-height: 5px;
-    text-align: center;
-    align-content: center;
-  }
-  
-  footer p {
-    font-size: 12px;
-  }
-  
-  
+  background-color: bisque;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  text-decoration: none;
+  color: black;
+}
+
+/* 헤더영역 */
+#logo div {
+  text-align: center;
+  margin-left: auto;
+  border: 5px dashed;
+}
+
+#logo #home {
+  margin-top: 20px;
+  width: 100%;
+  font-family: "Jersey 15", sans-serif;
+  font-style: normal;
+  font-size: 70px;
+}
+
+/* 검색영역 & 버튼 */
+#search-section div {
+  border-style: none;
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.search-btn {
+  border-radius: 5px;
+  background-color: bisque;
+  padding: 5px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-right: 10px;
+}
+
+#search-section input {
+  border-radius: 10px;
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+select {
+  float: right;
+  margin-right: 10px;
+  height: 30px;
+  width: 90px;
+  font-size: 15px;
+}
+
+/* 영화목록들 */
+#movie-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 50px;
+  width: 300px;
+  text-align: center;
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 150;
+  font-style: normal;
+  box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7);
+  transition: scale 0.45s;
+  background-color: burlywood;
+}
+.card:hover {
+  scale: 120%;
+}
+
+img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card h1 {
+  font-size: 23px;
+  background-color: transparent;
+}
+
+.card p {
+  font-size: 17px;
+  background-color: transparent;
+}
+
+/* 위로 */
+.arrowBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: auto;
+
+  display: flex;
+  position: sticky;
+  bottom: 20px;
+  right: 10px;
+
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+}
+
+footer {
+  margin-top: 40px;
+  height: 15vh;
+  line-height: 5px;
+  text-align: center;
+  align-content: center;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+
 .detail-container {
-    border: 3px solid green;
-    margin: 10px 150px;
-    display: flex;
-  }
-  
-  .detail-container img {
-    width: 400px;
-    margin-right: 20px;
-  }
-  
-  .detail-container #detail-title {
-    font-size: 30px;
-    font-weight: bold;
-  }
+  border: 3px solid green;
+  margin: 10px 150px;
+  display: flex;
+}
+
+.detail-container img {
+  width: 400px;
+  margin-right: 20px;
+}
+
+.detail-container #detail-title {
+  font-size: 30px;
+  font-weight: bold;
+}
