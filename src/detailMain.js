@@ -1,9 +1,7 @@
 import { searchMovies } from "./searchMovies.js";
-import {review} from "./review.js"
-import { security } from "./security.js"
+import { handleReview } from "./handleReview.js"
 import { toTheTop } from "./toTheTop.js";
 
-review();
 searchMovies();
 toTheTop();
-security()
+handleReview()
