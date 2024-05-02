@@ -2,6 +2,17 @@
   background-color: bisque;
 
 }
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  text-decoration: none;
+  color: black;
+}
+
 /* 헤더영역 */
 #logo div {
   text-align: center;
@@ -124,7 +135,7 @@ img {
   margin-right: 20px;
 }
 
-.detail-container .title {
+.detail-container #detail-title {
   font-size: 30px;
   font-weight: bold;
 }
