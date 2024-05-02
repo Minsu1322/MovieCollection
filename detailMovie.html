@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/style.css" />
+    <!-- <link rel="stylesheet" href="./style/style.css" /> -->
+    <link rel="stylesheet" href="./style/detail.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
       rel="stylesheet"
     />
-    <script type="module" src="./src/main.js"></script>
+
+    <script type="module" src="./src/detailMain.js"></script>
     <title>project1</title>
   </head>
+
   <body>
     <!-- 헤더영역 -->
     <header id="logo">
@@ -34,16 +37,35 @@
       </form>
     </header>
 
-    <!-- 영화 목록 -->
-    <section id="movie-list">
-      <select id="sort">
-        <option value="" disabled selected style="display: none">
-          정렬 선택
-        </option>
-        <option value="name">이름순</option>
-        <option value="score">평점순</option>
-      </select>
-      <div id="movie-cards"></div>
+    <!-- 상세설명 -->
+    <section class="detail-container">
+      <img id="detail-poster" alt="" />
+      <div>
+        <p id="detail-title"></p>
+        <div class="movieinfo">
+          <p id="detail-average">평점: 5점</p>
+          <p id="detail-release">개봉일</p>          
+          <p id="detail-popular">관객 수: 10만 명</p>
+        </div>
+        <p id="detail-overview">줄거리</p>
+      </div>
+    </section>
+
+    <!-- 리뷰영역 -->
+    <section class="review-container">
+      <form id="review-form">
+        <label for="reviewId">작성자</label>
+        <input id="reviewId" type="text" />
+
+        <label for="reviewPW">비밀번호</label>
+        <input id="reviewPW" type="password" />
+
+        <textarea id="review-text" name="" cols="60" rows="8"></textarea>
+        <button class="submit-btn">작성</button>
+      </form>
+
+      <!-- 리뷰리스트 -->
+      <div class="review-list"></div>
     </section>
 
     <!-- 화살표 -->
@@ -51,6 +73,7 @@
       top
       <i class="arrow-up"></i>
     </button>
+
     <footer>
       <p>탕수육조 Tangsoo6</p>
       <p>유수지 곽현정 김민수 김현진 이보영 황승현</p>
