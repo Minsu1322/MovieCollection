@@ -17,8 +17,8 @@ export const handleReview = async () => {
     function renderReviews() {
       reviewList.innerHTML = reviews.map(review => `
         <div>
-          <span>작성자: ${review.author}</span>
-          <span>리뷰 내용: ${review.text}</span>
+          <span><작성자>: ${review.author}</span></br>
+          <span><리뷰 내용></br> ${review.text}</span>
           <button class="delete-btn" data-id="${review.id}">삭제</button>
         </div>
       `).join('');

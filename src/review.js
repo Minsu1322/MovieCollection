@@ -33,6 +33,7 @@ export const review = () => {
     const reviewList = document.querySelector(".review-list");
     const reviews = JSON.parse(localStorage.getItem("movies")) || [];
 
+    reviewList.innerHTML = ""
     reviews.forEach((review) => {
       let temp_html = `<div>${review}</div>
         

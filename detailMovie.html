@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="./style/style.css" /> -->
-    <link rel="stylesheet" href="./style/detail.css">
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/review.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
       rel="stylesheet"
     />
-  
 
     <script type="module" src="./src/detailMain.js"></script>
     <title>project1</title>
@@ -40,9 +40,9 @@
 
     <!-- 상세설명 -->
     <section class="detail-container">
-      <img id="detail-poster" alt="" />
+      <img id="detail-poster" src="./images/basic_poster.jpg" alt="" />
       <div>
-        <p id="detail-title"></p>
+        <p id="detail-title">영화 제목</p>
         <p id="detail-release">개봉일</p>
         <p id="detail-average">평점: 5점</p>
         <p id="detail-popular">관객 수: 10만 명</p>
@@ -54,24 +54,28 @@
     <section class="review-container">
       <form id="review-form">
         <label for="reviewId">작성자</label>
-        <input id="reviewId" type="text" />
+        <input id = reviewId type="text" /> 
 
         <label for="reviewPW">비밀번호</label>
-        <input id="reviewPW" type="password" />
+        <input id = reviewPW type="password" />
 
         <textarea id="review-text" name="" cols="60" rows="8"></textarea>
         <button class="submit-btn">작성</button>
       </form>
 
       <!-- 리뷰리스트 -->
-      <div class="review-list"></div>
+      <div class="review-list">
+
+      </div>
     </section>
+
 
     <!-- 화살표 -->
     <button class="arrowBtn">
       top
       <i class="arrow-up"></i>
     </button>
+
 
     <footer>
       <p>탕수육조 Tangsoo6</p>
