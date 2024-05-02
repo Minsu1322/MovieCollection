@@ -13,12 +13,6 @@ export const displayMovies = async () => {
     `
     )
     .join("");
-
-  const $title = document.querySelectorAll(".card h1");
-  const $score = document.querySelectorAll(".card p");
-  console.log($title, $score);
-
-  return { $title, $score };
 };
 
 const fetchMovieAPI = async () => {
