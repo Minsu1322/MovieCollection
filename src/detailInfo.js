@@ -15,9 +15,9 @@ export const detailInfo = async () => {
 console.log(movieObj)
   document.getElementById("detail-poster").setAttribute("src", `https://image.tmdb.org/t/p/w500${movieObj.backdrop_path}`);
   document.getElementById("detail-title").innerHTML = movieObj.title.toUpperCase();
-  document.getElementById("detail-release").innerHTML ="개봉일: " + movieObj.release_date;
-  document.getElementById("detail-average").innerHTML ="🌟" + movieObj.vote_average.toFixed(2);
-  document.getElementById("detail-popular").innerHTML ="관객수: " + movieObj.popularity;
+  document.getElementById("detail-release").innerHTML = `개봉일: 🎬${movieObj.release_date}`;
+  document.getElementById("detail-average").innerHTML = `평점: ⭐️${movieObj.vote_average}`;
+  document.getElementById("detail-popular").innerHTML = `인기도: 💖${movieObj.popularity}`;
   document.getElementById("detail-overview").innerHTML = movieObj.overview;
 
 
