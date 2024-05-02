@@ -5,5 +5,5 @@ import { review } from "./review.js";
 
 searchMovies();
 toTheTop();
-handleReview();
+// handleReview();
 review();

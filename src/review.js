@@ -1,28 +1,27 @@
 export const review = () => {
   window.onload = function () {
-    // event.preventDefault();
-    loadReviews();
+    displayReview();
   };
 
   const submitBtn = document.querySelector(".submit-btn");
 
-  submitBtn.addEventListener("submit", (e) => {
+  submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
     addReview();
   });
 
+  let arr = [];
+
   function addReview() {
     const reviewText = document.querySelector("#reviewText");
     const reviewId = document.querySelector("#reviewId");
-    const reviewPassword = document.querySelector("#reviewPassword");
+    // const reviewPassword = document.querySelector("#reviewPW");
 
     const reviewInput = reviewText.value;
 
     if (reviewInput) {
-      const review = JSON.parse(localStorage.getItem("movies"));
-      const reviews = review.push(reviewInput);
-      localStorage.setItem(JSON.stringify(reviews));
-      reviewInput.value = "";
+      arr.push(reviewInput);
+      localStorage.setItem("movies", JSON.stringify(arr));
 
       displayReview();
     } else {
@@ -30,20 +29,15 @@ export const review = () => {
     }
   }
 
-  function loadReviews() {
-    displayReview();
-  }
-
   function displayReview() {
-    // event.preventDefault();
-    const reviewContainer = document.querySelector(".review-container");
-    const reviews = JSON.parse(localStorage.getItem("movies"));
-    reviewContainer.innerHTML = "";
+    const reviewList = document.querySelector(".review-list");
+    const reviews = JSON.parse(localStorage.getItem("movies")) || [];
 
     reviews.forEach((review) => {
-      const reviewElement = document.createElement("div");
-      reviewElement.textContent = review;
-      reviewContainer.appendChild(reviewElement);
+      let temp_html = `<div>${review}</div>
+        
+        `;
+      reviewList.innerHTML += temp_html;
     });
   }
 };
