@@ -1,63 +1,60 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style/style.css" />
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" src="./src/main_src/indexMain.js"></script>
-    <title>project1</title>
-  </head>
-  <body>
-    <!-- 헤더영역 -->
-    <header id="logo">
-      <div>
-        <a href="./index.html" id="home">Movie-Collection</a>
-      </div>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"rel="stylesheet"/> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+  <script type="module" src="./src/main_src/indexMain.js"></script>
+  <title>project1</title>
+</head>
 
-      <!-- 영화 검색 -->
-      <form id="search-section">
-        <div>
-          <label for="search-section-movie">영화검색</label>
-          <input
-            id="search-section-movie"
-            type="text"
-            placeholder="제목을 입력해주세요!"
-          />
-          <button id="search-btn">검색</button>
-        </div>
+<body>
+  <!-- 헤더영역 -->
+  <header id="logo">
+    <div id="home">
+      <a  href="./index.html" id="home">
+      <img id="logoimg" src="images/logo.png" href="./index.html">
+        6Flix
+      </a>      
+     <form id="search-section">    
+        <input id="search-section-movie" type="text" placeholder="제목을 입력해주세요!" />
+        <button id="search-btn">검색</button>
       </form>
-    </header>
+        <select id="sort">
+          <option value="" disabled selected style="display: none">
+            정렬 선택
+          </option>
+          <option value="name">이름순</option>
+          <option value="score">평점순</option>
+        </select>
+      </div>    
+  </header>
 
-    <!-- 영화 목록 -->
-    <section id="movie-list">
-      <select id="sort">
-        <option value="" disabled selected style="display: none">
-          정렬 선택
-        </option>
-        <option value="name">이름순</option>
-        <option value="score">평점순</option>
-      </select>
-      <div id="movie-cards"></div>
-    </section>
+  <!-- 영화 목록 -->
+  <section id="movie-list">
+    <div id="movie-cards"></div>
+  </section>
 
-    <!-- 화살표 -->
-    <button class="arrowBtn">
-      top
-      <i class="arrow-up"></i>
-    </button>
-    <footer>
-      <p>탕수육조 Tangsoo6</p>
-      <p>유수지 곽현정 김민수 김현진 이보영 황승현</p>
-      <p>phone: 010-1234-5678</p>
-      <p>email: Tangsoo6@Sparta.com</p>
-      <br />
-      <p>copyright ⓒ Tangsoo6 All right reserved.</p>
-    </footer>
-  </body>
+  <!-- 화살표 -->
+  <button class="arrowBtn">
+    top
+    <i class="arrow-up"></i>
+  </button>
+  <footer>
+    <p>탕수육조 Tangsoo6</p>
+    <p>유수지 곽현정 김민수 김현진 이보영 황승현</p>
+    <p>phone: 010-1234-5678</p>
+    <p>email: Tangsoo6@Sparta.com</p>
+    <br />
+    <p>copyright ⓒ Tangsoo6 All right reserved.</p>
+  </footer>
+</body>
+
 </html>
