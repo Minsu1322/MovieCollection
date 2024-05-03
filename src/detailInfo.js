@@ -37,7 +37,7 @@ export const detailInfo = async () => {
       `https://image.tmdb.org/t/p/w500${movieObj.backdrop_path}`
     );
 
-  // console.log(movieObj);
+  console.log(movieObj);
 
-  return movieId;
+  return movieId
 };

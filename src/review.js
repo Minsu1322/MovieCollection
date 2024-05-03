@@ -1,4 +1,8 @@
-export const review = () => {
+import { detailInfo } from "./detailInfo.js";
+
+export const review = async() => {
+  const movieId = await detailInfo();
+  
   window.onload = function () {
     displayReview();
   };
@@ -13,23 +17,24 @@ export const review = () => {
   const reviewText = document.querySelector("#review-text");
   const reviewId = document.querySelector("#reviewId");
   const reviewPW = document.querySelector("#reviewPW");
-
+ 
   let arr = [];
+  displayReview();
 
   function addReview() {
     const reviewInput = reviewText.value;
     const reviewInputId = reviewId.value;
     const reviewInputPW = reviewPW.value;
 
+    let userReview = {
+      ID: reviewInputId,
+      PW: reviewInputPW,
+      text: reviewInput,
+    };
+
     if (reviewInput && reviewInputId && reviewInputPW) {
-      let reviews = JSON.parse(localStorage.getItem("movies")) || [];
-      let userReview = {
-        ID: reviewInputId,
-        PW: reviewInputPW,
-        text: reviewInput,
-      };
-      reviews.push(userReview);
-      localStorage.setItem("movies", JSON.stringify(reviews));
+      arr.push(userReview);
+      localStorage.setItem(movieId, JSON.stringify(arr));
       displayReview();
     } else if (reviewInput && reviewInputId) {
       alert("비밀번호를 입력해주세요.");
@@ -40,11 +45,12 @@ export const review = () => {
     } else {
       alert("리뷰를 입력해주세요.");
     }
+
   }
 
   function displayReview() {
     
-    const reviews = JSON.parse(localStorage.getItem("movies"));
+    const reviews = JSON.parse(localStorage.getItem(movieId));
 
     reviewList.innerHTML = "";
     reviews.forEach((review) => {
@@ -58,11 +64,11 @@ export const review = () => {
   }
 
   function deleteReview(reviewInputId, reviewInputPW) {   
-    const reviews = JSON.parse(localStorage.getItem("movies"));
+    const reviews = JSON.parse(localStorage.getItem(movieId));
     const index = reviews.findIndex(review => review.ID === reviewInputId && review.PW === reviewInputPW);
     if (index !== -1) {
       reviews.splice(index, 1);
-      localStorage.setItem("movies", JSON.stringify(reviews));
+      localStorage.setItem(movieId, JSON.stringify(reviews));
       displayReview();
     } else {
       alert("비밀번호가 일치하지 않거나 리뷰가 존재하지 않습니다.");
