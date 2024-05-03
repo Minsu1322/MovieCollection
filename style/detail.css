@@ -94,77 +94,160 @@ footer {
 footer p {
   font-size: 12px;
 }
+/* 상세페이지영역 */
 
 .detail-container {
   border: 3px solid green;
-  margin: 10px 200px;
-  display: flex;
-  /* overflow-y: scroll; */
-  height: 800px;
+  margin: 10px 100px;
+  display: grid;
+  height: auto;
+  width: 100;
+  background-color:khaki;
 }
-
-.detail-container img {
-    width: 400px;
-    /* height: 500px; */
-    margin-right: 20px;
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+  background-color: darkolivegreen;
 }
 #detail-poster {
-    width: 400px;
-    height: 500px;
-    margin-right: 20px;
+  width: 500px;
+  height: 600px;
+  margin: 10px 80px 10px 80px;
+  border-radius: 30px;
+  border: 10px solid white;
 }
 
-
-.movieinf {
-  display: flex;
-  font-weight: bold;
+.rightpart {
+  height: auto;
+  /* margin-right: 50px; */
+  background-color: coral;
+  padding: 10px;
+  margin: 10px;
+}
+.rightpart p {
+  background-color: transparent;
 }
 #detail-title {
-    font-size: 50px;
+  font-size: 50px;
   font-family: impact, Charcoal, sans-serif;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 20px;
-  
+  letter-spacing: 0.5px;
+  height: auto;
+  background-color: brown;
 }
-#detail-poster {
-    border-radius: 30px;
-    border: 10px solid white;
-    margin-left: 125px;
-  }
+.litleinfo {
+  display: flex;
+  background-color: rgb(172, 172, 255);
+  height: 170px;
+}
+
 .movieinfo {
- 
-  font-size:110%;
+  font-family: "Orbit", sans-serif;
+  font-size: 110%;
   font-weight: bold;
-
+  height: 100px;
+  background-color: transparent;
 }
 
-#detail-release,
-#detail-popular {
-  /* margin-left: 3%; */
+.movieclip {
+  display: flex;
+  margin-left: 40px;
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
 }
 
+#clip {
+  margin: 2%;
+  font-family: impact, Charcoal, sans-serif;
+  writing-mode: vertical-lr;
+  text-align: center;
+  font-weight: 800;
+}
+#detail-poster2 {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  
+  /* object-fit: cover; */
+  /* border-radius: 30px;
+  border: 5px solid white; */
+}
 #detail-overview {
   font-family: Arial, sans-serif;
   font-size: 110%;
   /* font-weight: bold; */
-  
-  margin-right: 150px;
-  margin-top: 30px;
-  
+  height: 120px;
+  background-color: rgba(176, 104, 68, 0.496);
+  border-radius: 15px;
+  border: 2px solid white;
+  padding: 15px
 }
-#detail-poster2 {
-    /* position: absolute; */
-    top: 605px;
-    border-radius: 30px;
-    border: 5px solid white;
-  }
-#clip {
-    margin-top: 40px;
-    margin-bottom: 5px;
-    margin-left: 20px;
-    font-size: small;
-    font-weight: bold;
+
+#video-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  background-color: transparent;
 }
-.movieclip{
-    
+.cast-box {
+  margin: 5px;
+  background-color: transparent;
+}
+#cast {
+  margin: 0;
+  margin-left: 90px;
+  font-size: 32px;
+  font-weight: bold;
+  background-color: transparent;
+}
+#cast-container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  flex-grow: 1;
+  padding: 30px;
+  background-color: cadetblue;
+  border-radius: 20px;
+}
+.actor {
+  align-items: center;
+
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.553);
+  box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.3);
+  transition: scale 0.45s;
+}
+
+.actor-image {
+  width: 150px; 
+  height: auto; 
+  margin: 10px; 
+  border: 2px solid white;
+  border-radius: 15px;
+}
+.actor a {
+  background-color: transparent;
+}
+
+.actor-name,
+.actor-character {
+  background-color: transparent;
+  text-align: center;
+  font-size: 13.8px;
+  font-weight: bold;
+  margin: 0; /* 기본 마진 제거 */
+  margin-bottom: 3px;
+}
+.actor-character {
+  margin-bottom: 10px;
+}
+.actor:hover {
+  scale: 110%;
 }
