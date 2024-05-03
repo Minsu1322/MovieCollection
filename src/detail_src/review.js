@@ -3,10 +3,6 @@ import { detailInfo } from "./detailInfo.js";
 export const review = async() => {
   const movieId = await detailInfo();
   
-  window.onload = function () {
-    displayReview();
-  };
-
   const submitBtn = document.querySelector(".submit-btn");
   const reviewList = document.querySelector(".review-list");
   submitBtn.addEventListener("click", (e) => {
