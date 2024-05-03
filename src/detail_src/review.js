@@ -2,7 +2,8 @@ import { detailInfo } from "./detailInfo.js";
 
 export const review = async() => {
   const movieId = await detailInfo();
-  
+
+
   const submitBtn = document.querySelector(".submit-btn");
   const reviewList = document.querySelector(".review-list");
   submitBtn.addEventListener("click", (e) => {
@@ -18,6 +19,7 @@ export const review = async() => {
   displayReview();
 
   function addReview() {
+    arr = JSON.parse(localStorage.getItem(movieId)) || [];
     const reviewInput = reviewText.value;
     const reviewInputId = reviewId.value;
     const reviewInputPW = reviewPW.value;
@@ -27,7 +29,7 @@ export const review = async() => {
       PW: reviewInputPW,
       text: reviewInput,
     };
-
+    
     if (reviewInput && reviewInputId && reviewInputPW) {
       arr.push(userReview);
       localStorage.setItem(movieId, JSON.stringify(arr));
@@ -41,7 +43,6 @@ export const review = async() => {
     } else {
       alert("리뷰를 입력해주세요.");
     }
-
   }
 
   function displayReview() {
@@ -65,6 +66,7 @@ export const review = async() => {
     if (index !== -1) {
       reviews.splice(index, 1);
       localStorage.setItem(movieId, JSON.stringify(reviews));
+      arr = reviews;
       displayReview();
     } else {
       alert("비밀번호가 일치하지 않거나 리뷰가 존재하지 않습니다.");
@@ -80,4 +82,6 @@ export const review = async() => {
       }
     }
   });
+
+  
 };
