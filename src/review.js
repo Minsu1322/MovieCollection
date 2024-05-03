@@ -1,4 +1,5 @@
 export const review = () => {
+  
   window.onload = function () {
     displayReview();
   };
@@ -22,8 +23,9 @@ export const review = () => {
     const reviewInputPW = reviewPW.value;
 
     if (reviewInput && reviewInputId && reviewInputPW) {
-      let reviews = JSON.parse(localStorage.getItem("movies")) || [];
+      let reviews = JSON.parse(localStorage.getItem("movies"));
       let userReview = {
+        
         ID: reviewInputId,
         PW: reviewInputPW,
         text: reviewInput,
