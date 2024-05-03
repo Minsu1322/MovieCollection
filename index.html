@@ -17,7 +17,7 @@
     <!-- 헤더영역 -->
     <header id="logo">
       <div>
-        <span id="home">Movie-Collection</span>
+        <a href="./index.html" id="home">Movie-Collection</a>
       </div>
 
       <!-- 영화 검색 -->
@@ -36,6 +36,13 @@
 
     <!-- 영화 목록 -->
     <section id="movie-list">
+      <select id="sort">
+        <option value="" disabled selected style="display: none">
+          정렬 선택
+        </option>
+        <option value="name">이름순</option>
+        <option value="score">평점순</option>
+      </select>
       <div id="movie-cards"></div>
     </section>
 
