@@ -1,31 +1,8 @@
-<<<<<<< HEAD
-export const addReview = async () => {
-  const reviewInput = reviewText.value;
-  const reviewInputId = reviewId.value;
-  const reviewInputPW = reviewPW.value;
-
-  let userReview = {
-    ID: reviewInputId,
-    PW: reviewInputPW,
-    text: reviewInput,
-  };
-
-  if (reviewInput && reviewInputId && reviewInputPW) {
-    arr.push(userReview);
-    localStorage.setItem(movieId, JSON.stringify(arr));
-    displayReview();
-  } else if (reviewInput && reviewInputId) {
-    alert("비밀번호를 입력해주세요.");
-  } else if (reviewInput && reviewInputPW) {
-    alert("아이디를 입력해주세요.");
-  } else if (reviewInput) {
-    alert("아이디와 비밀번호를 입력해주세요.");
-  } else {
-    alert("리뷰를 입력해주세요.");
-  }
-=======
 import { beginToFirebase } from "./beginToFirebase.js";
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import {
+  collection,
+  addDoc,
+} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import { getCurrentDate } from "./getCurrentDate.js";
 
 // TODO: detailMain.js 파일에 함수 임포트 및 호출해야 함 -> O
@@ -63,5 +40,4 @@ export const addReview = (movieId) => {
 
     window.location.reload();
   });
->>>>>>> b09ff379bb0ddeb57ac16b3fb159faa804600d8f
 };

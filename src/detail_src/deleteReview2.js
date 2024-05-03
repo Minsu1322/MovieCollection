@@ -1,4 +1,4 @@
-import { beginToFirebase } from "./beginToFirebase.js";
+import { beginToFirebase } from "./beginToFirebase2.js";
 import {
   query,
   collection,
