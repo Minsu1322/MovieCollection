@@ -1,4 +1,4 @@
-import { fetchMovieAPI } from "./fetchMovieAPI.js";
+import { fetchMovieAPI } from "../all_src/fetchMovieAPI.js";
 
 export const detailInfo = async () => {
   const movieInfo = await fetchMovieAPI();
@@ -11,7 +11,6 @@ export const detailInfo = async () => {
     return obj;
   }, {});
 
-  // console.log(movieObj);
   document
     .getElementById("detail-poster")
     .setAttribute(
@@ -37,7 +36,5 @@ export const detailInfo = async () => {
       `https://image.tmdb.org/t/p/w500${movieObj.backdrop_path}`
     );
 
-  console.log(movieObj);
-
-  return movieId
+  return movieId;
 };
