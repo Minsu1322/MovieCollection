@@ -1,8 +1,9 @@
 import { detailInfo } from "./detailInfo.js";
 
-export const addReview = async () => {
+export const addReview2 = async () => {
   const movieId = await detailInfo();
 
+  arr = JSON.parse(localStorage.getItem(movieId)) || [];
   const reviewInput = reviewText.value;
   const reviewInputId = reviewId.value;
   const reviewInputPW = reviewPW.value;
