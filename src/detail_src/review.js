@@ -18,6 +18,7 @@ export const review = async () => {
   displayReview();
 
   function addReview() {
+    arr = JSON.parse(localStorage.getItem(movieId)) || [];
     const reviewInput = reviewText.value;
     const reviewInputId = reviewId.value;
     const reviewInputPW = reviewPW.value;
@@ -65,6 +66,7 @@ export const review = async () => {
     if (index !== -1) {
       reviews.splice(index, 1);
       localStorage.setItem(movieId, JSON.stringify(reviews));
+      arr = reviews;
       displayReview();
     } else {
       alert("비밀번호가 일치하지 않거나 리뷰가 존재하지 않습니다.");
