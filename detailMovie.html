@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/detail.css" />
     <link rel="stylesheet" href="./style/review.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,13 +40,21 @@
 
     <!-- 상세설명 -->
     <section class="detail-container">
-      <img id="detail-poster" src="./images/basic_poster.jpg" alt="" />
+
+      <img id="detail-poster" alt="" />
       <div>
-        <p id="detail-title">영화 제목</p>
-        <p id="detail-release">개봉일</p>
-        <p id="detail-average">평점: 5점</p>
-        <p id="detail-popular">관객 수: 10만 명</p>
+        <p id="detail-title"></p>
+        <div class="movieinfo">
+          <p id="detail-average">평점: 5점</p>
+          <p id="detail-release">개봉일</p>
+          <p id="detail-popular">관객 수: 10만 명</p>         
+        </div>
         <p id="detail-overview">줄거리</p>
+        
+        <div class="movieclip">
+          <p id="clip">Movie Clip</p>
+          <img id="detail-poster2" alt="" />
+        </div>
       </div>
     </section>
 
