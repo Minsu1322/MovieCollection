@@ -7,3 +7,4 @@ displayMovies();
 searchMovies();
 toTheTop();
 moviesSort();
+
