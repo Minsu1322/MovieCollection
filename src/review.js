@@ -1,7 +1,7 @@
 import { detailInfo } from "./detailInfo.js";
 
 export const review = async () => {
-  const movieInfo = await detailInfo();
+  const movieId = await detailInfo();
 
   const submitBtn = document.querySelector(".submit-btn");
   const reviewList = document.querySelector(".review-list");
