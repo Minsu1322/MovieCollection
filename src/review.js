@@ -1,7 +1,9 @@
-export const review = () => {
-  window.onload = function () {
-    displayReview();
-  };
+import { detailInfo } from "./detailInfo.js";
+
+export const review = async () => {
+  const movieInfo = await detailInfo();
+
+  // console.log(movieInfo);
 
   const submitBtn = document.querySelector(".submit-btn");
   const reviewList = document.querySelector(".review-list");
@@ -14,7 +16,7 @@ export const review = () => {
   const reviewId = document.querySelector("#reviewId");
   const reviewPW = document.querySelector("#reviewPW");
 
-  let arr = [];
+  displayReview();
 
   function addReview() {
     const reviewInput = reviewText.value;
@@ -22,14 +24,17 @@ export const review = () => {
     const reviewInputPW = reviewPW.value;
 
     if (reviewInput && reviewInputId && reviewInputPW) {
-      let reviews = JSON.parse(localStorage.getItem("movies")) || [];
+      let movieArr = JSON.parse(localStorage.getItem(`${movieInfo}`)) || [];
+
       let userReview = {
         ID: reviewInputId,
         PW: reviewInputPW,
         text: reviewInput,
       };
-      reviews.push(userReview);
-      localStorage.setItem("movies", JSON.stringify(reviews));
+
+      movieArr.push(userReview);
+      localStorage.setItem(`${movieInfo}`, JSON.stringify(movieArr));
+
       displayReview();
     } else if (reviewInput && reviewInputId) {
       alert("비밀번호를 입력해주세요.");
@@ -43,33 +48,34 @@ export const review = () => {
   }
 
   function displayReview() {
-    
-    const reviews = JSON.parse(localStorage.getItem("movies"));
+    const reviews = JSON.parse(localStorage.getItem(`${movieInfo}`));
 
     reviewList.innerHTML = "";
     reviews.forEach((review) => {
       const id = review["ID"];
       const text = review["text"];
-      console.log[id]
+      console.log[id];
       let temp_html = `<div>작성자: ${id} 리뷰내용: ${text}
       <button class="delete-btn" data-id="${id}">삭제</button></div>`;
       reviewList.innerHTML += temp_html;
     });
   }
 
-  function deleteReview(reviewInputId, reviewInputPW) {   
-    const reviews = JSON.parse(localStorage.getItem("movies"));
-    const index = reviews.findIndex(review => review.ID === reviewInputId && review.PW === reviewInputPW);
+  function deleteReview(reviewInputId, reviewInputPW) {
+    const reviews = JSON.parse(localStorage.getItem(movieInfo));
+    const index = reviews.findIndex(
+      (review) => review.ID === reviewInputId && review.PW === reviewInputPW
+    );
     if (index !== -1) {
       reviews.splice(index, 1);
-      localStorage.setItem("movies", JSON.stringify(reviews));
+      localStorage.setItem(movieInfo, JSON.stringify(reviews));
       displayReview();
     } else {
       alert("비밀번호가 일치하지 않거나 리뷰가 존재하지 않습니다.");
     }
-}
+  }
 
-  reviewList.addEventListener("click", function(event) {
+  reviewList.addEventListener("click", function (event) {
     if (event.target.classList.contains("delete-btn")) {
       const reviewInputId = event.target.dataset.id;
       const reviewInputPW = prompt("비밀번호를 입력하세요:");
