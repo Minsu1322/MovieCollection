@@ -46,7 +46,6 @@ export const review = async() => {
   }
 
   function displayReview() {
-    
     const reviews = JSON.parse(localStorage.getItem(movieId));
 
     reviewList.innerHTML = "";
