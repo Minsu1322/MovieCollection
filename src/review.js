@@ -1,4 +1,7 @@
-export const review = () => {
+import { detailInfo } from "./detailInfo.js";
+
+export const review = async() => {
+  const movieInfo = await detailInfo();
   
   window.onload = function () {
     displayReview();
@@ -22,16 +25,16 @@ export const review = () => {
     const reviewInputId = reviewId.value;
     const reviewInputPW = reviewPW.value;
 
+    let userReview = {
+      ID: reviewInputId,
+      PW: reviewInputPW,
+      text: reviewInput,
+    };
+
     if (reviewInput && reviewInputId && reviewInputPW) {
-      let reviews = JSON.parse(localStorage.getItem("movies"));
-      let userReview = {
-        
-        ID: reviewInputId,
-        PW: reviewInputPW,
-        text: reviewInput,
-      };
-      reviews.push(userReview);
-      localStorage.setItem("movies", JSON.stringify(reviews));
+      arr.push(userReview);
+      // localStorage.setItem(`${movieInfo}`, JSON.stringify(arr));
+      localStorage.setItem("movies", JSON.stringify(arr));
       displayReview();
     } else if (reviewInput && reviewInputId) {
       alert("비밀번호를 입력해주세요.");
