@@ -1,9 +1,11 @@
 import { searchMovies } from "../all_src/searchMovies.js";
 import { toTheTop } from "../all_src/toTheTop.js";
 import { review } from "./review.js";
+// import { reviewCopy } from "./reviewCopy.js";
 import { detailInfo } from "./detailInfo.js";
 
-review();
 searchMovies();
 toTheTop();
 detailInfo();
+review();
+// reviewCopy();
