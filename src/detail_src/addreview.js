@@ -1,4 +1,8 @@
+import { detailInfo } from "./detailInfo.js";
+
 export const addReview = async () => {
+  const movieId = await detailInfo();
+
   const reviewInput = reviewText.value;
   const reviewInputId = reviewId.value;
   const reviewInputPW = reviewPW.value;

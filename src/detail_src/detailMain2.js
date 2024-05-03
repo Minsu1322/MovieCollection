@@ -4,6 +4,7 @@ import { detailInfo } from "./detailInfo.js";
 import { addReview } from "./addReview2.js";
 import { deleteReview } from "./deleteReview2.js";
 import { fixReview } from "./fixReview2.js";
+import { getReview } from "./getReview2.js";
 
 searchMovies();
 toTheTop();

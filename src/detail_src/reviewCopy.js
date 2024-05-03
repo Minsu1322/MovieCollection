@@ -1,5 +1,4 @@
 import { detailInfo } from "./detailInfo.js";
-import { addReview } from "./addreview.js";
 
 export const review = async () => {
   const movieId = await detailInfo();
@@ -11,28 +10,9 @@ export const review = async () => {
     addReview();
   });
 
-  const reviewText = document.querySelector("#review-text");
-  const reviewId = document.querySelector("#reviewId");
-  const reviewPW = document.querySelector("#reviewPW");
-
-  let arr = [];
   displayReview();
 
   addReview();
-
-  function displayReview() {
-    const reviews = JSON.parse(localStorage.getItem(movieId));
-
-    reviewList.innerHTML = "";
-    reviews.forEach((review) => {
-      const id = review["ID"];
-      const text = review["text"];
-      console.log[id];
-      let temp_html = `<div>작성자: ${id} 리뷰내용: ${text}
-      <button class="delete-btn" data-id="${id}">삭제</button></div>`;
-      reviewList.innerHTML += temp_html;
-    });
-  }
 
   function deleteReview(reviewInputId, reviewInputPW) {
     const reviews = JSON.parse(localStorage.getItem(movieId));
