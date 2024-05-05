@@ -36,6 +36,15 @@ export const deleteReview = (movieId) => {
       const $checkPW = $checkPWBox.querySelector("#checkPW");
       const $checkPWBtn = $checkPWBox.querySelector("#checkPW-btn");
 
+      $checkPW.focus();
+
+      document.addEventListener("click", (e) => {
+        if (e.target !== $checkPWBox && e.target !== $checkPW) {
+          $checkPWBox.style.display = "none";
+          $checkPW.value = "";
+        }
+      });
+
       $checkPWBtn.addEventListener("click", async (e) => {
         e.preventDefault();
         if ($checkPW.value === rightPW) {
@@ -43,6 +52,7 @@ export const deleteReview = (movieId) => {
           window.location.reload();
         } else {
           alert("비밀번호가 일치하지 않습니다.");
+          $checkPW.value = "";
         }
       });
     }
