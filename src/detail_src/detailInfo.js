@@ -11,7 +11,6 @@ export const detailInfo = async () => {
     return obj;
   }, {});
 
-  // console.log(movieObj);
   document
     .getElementById("detail-poster")
     .setAttribute(
@@ -37,9 +36,6 @@ export const detailInfo = async () => {
       `https://image.tmdb.org/t/p/w500${movieObj.backdrop_path}`
     );
 
-  // console.log(movieObj);
-
-  // 출연진 정보 추가
   // 출연진 정보 추가
   const castApiKey = "23317d8f45886930254ccd062e0ed8a1"; // 출연진 정보 API
   const castOptions = {
@@ -60,7 +56,6 @@ export const detailInfo = async () => {
       return response.json();
     })
     .then((response) => {
-      // console.log(response);
       // 출연진 정보를 가져와서 HTML에 추가
       const castList = response.cast.slice(0, 6); // 상위 5명의 출연진 정보만 표시
       const castContainer = document.getElementById("cast-container");
@@ -100,7 +95,6 @@ export const detailInfo = async () => {
       return response.json();
     })
     .then((response) => {
-      // console.log(response);
       // 동영상이 있는지 확인하고, 첫 번째 동영상의 키를 추출
       if (response.results && response.results.length > 0) {
         const videoKey = response.results[0].key;

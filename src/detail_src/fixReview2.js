@@ -15,7 +15,6 @@ export const fixReview = (movieId) => {
   const $reviewList = document.querySelector(".review-list");
 
   $reviewList.addEventListener("click", async (e) => {
-    e.preventDefault();
     if (e.target.id === "fix-btn") {
       const reviewBottom =
         e.target.parentNode.parentNode.nextSibling.nextSibling;
@@ -31,50 +30,71 @@ export const fixReview = (movieId) => {
 
       const rightPW = fixData.docs[0].data().password;
 
-      const $checkFixComBtn = e.target.nextSibling.nextSibling;
+      const $checkFixComBtn = e.target.nextSibling.nextSibling.nextSibling.nextSibling;
 
-      const $checkPWBox =
-        $checkFixComBtn.nextSibling.nextSibling.nextSibling.nextSibling;
-      $checkPWBox.style.display = "flex";
+      const $checkPWBox1 = e.target.nextSibling.nextSibling;
+      $checkPWBox1.style.display = "flex";
 
-      const $checkPW = $checkPWBox.querySelector("#checkPW");
-      const $checkPWBtn = $checkPWBox.querySelector("#checkPW-btn");
+      const $div = $checkPWBox1.querySelector("div");
+      const $checkPW1 = $checkPWBox1.querySelector("#checkPW1");
+      const $checkPWBtn1 = $checkPWBox1.querySelector("#checkPW-btn1");
 
-      $checkPW.focus();
+      $checkPW1.focus();
 
-      document.addEventListener("click", () => {
-        $checkPWBox.style.display = "none";
-        $checkPW.value = "";
-      });
-
-      $checkPWBtn.addEventListener("click", async (e) => {
+      const clickHandler = async (e) => {
         e.preventDefault();
-        if ($checkPW.value === rightPW) {
-          $checkPWBox.style.display = "none";
+        if (
+          e.target !== $checkPWBox1 &&
+          e.target !== $div &&
+          e.target !== $checkPW1 &&
+          e.target !== $checkPWBtn1 &&
+          e.target.id !== "fix-btn"
+        ) {
+          $checkPWBox1.style.display = "none";
+          $checkPW1.value = "";
+          $checkPWBtn1.removeEventListener("click", clickPWHandler);
+        }
+      };
+
+      document.addEventListener("click", clickHandler);
+
+      const clickPWHandler = async (e) => {
+        e.preventDefault();
+        if ($checkPW1.value === rightPW) {
+          $checkPWBox1.style.display = "none";
           $checkFixComBtn.style.display = "block";
-          $checkFixComBtn.previousSibling.previousSibling.style.display =
+          $checkPWBox1.previousSibling.previousSibling.style.display =
             "none";
           reviewBottom.children[1].style.display = "none";
           reviewBottom.children[2].style.display = "flex";
           const textLength = reviewBottom.children[2].value.length;
           reviewBottom.children[2].focus();
           reviewBottom.children[2].setSelectionRange(textLength, textLength);
-
-          $checkFixComBtn.addEventListener("click", async (e) => {
-            let newComment = reviewBottom.children[2].value;
-            console.log(newComment);
-            let date = getCurrentDate();
-            await updateDoc(fixData.docs[0].ref, {
-              date: date,
-              comment: newComment,
-            });
-            window.location.reload();
-          });
+          $checkFixComBtn.addEventListener("click", clickFixComBtnHandler);
+          e.stopPropagation();
         } else {
           alert("비밀번호가 일치하지 않습니다.");
-          $checkPW.value = "";
+          $checkPW1.value = "";
+          $checkPW1.focus();
+          document.removeEventListener("click", clickHandler);
         }
-      });
+        document.addEventListener("click", clickHandler);
+      };
+
+      $checkPWBtn1.addEventListener("click", clickPWHandler);
+
+      const clickFixComBtnHandler = async () => {
+        e.preventDefault();
+        let newComment = reviewBottom.children[2].value;
+        console.log(newComment);
+        let date = getCurrentDate();
+        await updateDoc(fixData.docs[0].ref, {
+          date: date,
+          comment: newComment,
+        });
+        window.location.reload();
+      };
+
     }
   });
 };
