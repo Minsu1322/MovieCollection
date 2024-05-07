@@ -42,7 +42,7 @@ export const detailInfo = async () => {
     .getAttribute("src");
 
   // total 클래스 요소 가져오기
-  const totalElement = document.querySelector(".blur");
+  const totalElement = document.querySelector(".blur-effect");
 
   // 배경 이미지 설정
   totalElement.style.backgroundImage = "url('" + poster2Src + "')";
