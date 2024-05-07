@@ -61,6 +61,7 @@ export const fixReview = (movieId) => {
           reviewBottom.children[2].setSelectionRange(textLength, textLength);
 
           $checkFixComBtn.addEventListener("click", async (e) => {
+            e.preventDefault();
             let newComment = reviewBottom.children[2].value;
             console.log(newComment);
             let date = getCurrentDate();
