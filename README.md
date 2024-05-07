@@ -2,12 +2,17 @@
 
 [영화 사이트 바로가기](https://alstn-movie1.netlify.app/)
 
+## 주의사항: 파일 경로 바꿔야 되는 파일
+- [displayMovies.js](./src/main_src/displayMovies.js)
+- [moviesSort.js](./src/main_src/moviesSort.js)
+- [searchMovies.js](./src/all_src/searchMovies.js)
+
 ## 0. 헤더, 푸터
 
 - 헤더와 푸터는 모든 페이지에 똑같이 둔다.
 
 - 헤더
-  - 웹사이트 제목, 검색창, 검색 버튼
+  - 웹사이트 제목, 검색창, 검색 버튼, 정렬 옵션
   - 다른 페이지에서 웹사이트 제목을 클릭하면, 메인 페이지로 이동하도록 구현한다.
   - 다른 페이지에서 검색창에 검색어를 입력하면, 영화 검색 페이지로 이동하도록 구현한다.
 
@@ -27,18 +32,20 @@
 ## 2. 영화 상세 페이지
 
 - 영화 상세 정보 컨테이너
-  - 포스터(poster_path), 제목(title), 평점(vote_average), 개봉일(release_date), 인기(popularity), 줄거리(overview)
+  - 포스터(poster_path), 제목(title), 평점(vote_average), 개봉일(release_date), 인기(popularity), 줄거리(overview) 등
 
 - 영화 리뷰 작성 컨테이너
   - 리뷰 작성 박스: 리뷰를 작성하는 부분
     - 작성자 입력란
     - 비밀번호 입력란
+    - 평점 선택란
     - 리뷰 작성란
     - 리뷰 작성 버튼
 
   - 리뷰 목록 박스: 작성된 리뷰가 보이는 부분
-    - 수정/수정 확인 버튼, 삭제 버튼 (추가 요구사항)
-    - 리뷰 수정 및 삭제 시 비밀번호로 작성자가 맞는지 확인하기 (추가 요구사항)
+    - 작성자, 작성 날짜, 평점, 리뷰
+    - 수정/수정 완료 버튼, 삭제 버튼
+    - 리뷰 수정 및 삭제 시 비밀번호로 작성자가 맞는지 확인하기
 
 ## 3. 영화 검색 페이지
 

@@ -7,10 +7,12 @@ import {
   where,
   limit,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import { openModal } from "./openModal2.js";
 
 export const deleteReview = (movieId) => {
   const db = beginToFirebase();
 
+  const $checkBtn = document.querySelector(".check-btn");
   const $reviewList = document.querySelector(".review-list");
 
   $reviewList.addEventListener("click", async (e) => {
@@ -44,6 +46,7 @@ export const deleteReview = (movieId) => {
           e.target !== $div &&
           e.target !== $checkPW2 &&
           e.target !== $checkPWBtn2 &&
+          e.target !== $checkBtn &&
           e.target.id !== "delete-btn"
         ) {
           $checkPWBox2.style.display = "none";
@@ -59,7 +62,7 @@ export const deleteReview = (movieId) => {
           await deleteDoc(deleteData.docs[0].ref);
           window.location.reload();
         } else {
-          alert("비밀번호가 일치하지 않습니다.");
+          await openModal("비밀번호가 일치하지 않습니다.");
           $checkPW2.value = "";
           $checkPW2.focus();
           document.removeEventListener("click", clickHandler);
