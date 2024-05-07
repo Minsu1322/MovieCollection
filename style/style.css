@@ -2,6 +2,10 @@
   background-color: bisque;
 }
 
+body {
+  margin: 0;
+}
+
 a {
   margin: 0;
   padding: 0;
@@ -10,62 +14,6 @@ a {
   font: inherit;
   text-decoration: none;
   color: black;
-}
-
-/* 헤더영역 */
-#logo div {
-  align-items: center;  
-  display: flex  
-}
-
-#logo #home {  
-  width: 100%;
-  font-family: "Kanit", sans-serif;
-  font-style: normal;
-  font-size: 66px;
-  background-color: #3C8E84;
-}
-
-#logoimg {      
-  width: 120px;
-  background-color: #3C8E84;  
-  margin-left: 30px;
-  margin-right: 10px;
-}
-
-#search-section-movie {
-  font-family: "NEXON Lv1 Gothic OTF";   
-  text-align: center;  
-  height: 34px;
-  width: 200px;
-}
-
-#search-btn { 
-  background-color: #FF8B66;
-  margin-left: 8px;
-  width: 80px;
-  font-weight: bolder;
-  font-size: 20px;
-  border-width: 0;
-}
-
-#search-section {    
-  display: flex;
-  height: 40px;  
-  font-weight: bolder;
-  background-color: #3C8E84;
-}
-
-#sort {
-  font-family: "NEXON Lv1 Gothic OTF";
-  display: flex;
-  margin-left: 10px;
-  margin-right: 50px;
-  height: 40px;
-  width: 130px;
-  border-width: 0;
-  text-align: center;
-  
 }
 
 /* 영화목록들 */
@@ -88,13 +36,13 @@ a {
   transition: scale 0.45s;
   background-color: burlywood;
 }
+
 .card:hover {
   scale: 120%;
 }
 
 img {
   width: 300px;
-  height: auto;
   border-radius: 10px;
 }
 
@@ -109,11 +57,12 @@ img {
 }
 
 /* 위로 */
-.arrowBtn {
+.arrowBtn {  
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin-left: auto;
+  margin-left: auto; 
+  margin-bottom: 15px; 
 
   display: flex;
   position: sticky;
@@ -123,25 +72,4 @@ img {
   align-items: center;
   text-align: center;
   font-size: 16px;
-}
-
-
-
-footer {
-  margin-top: 40px;
-  height: 15vh;
-  line-height: 5px;
-  text-align: center;
-  align-content: center;
-}
-
-footer p {
-  font-size: 12px;
-}
-
-@font-face {
-  font-family: 'NEXON Lv1 Gothic OTF';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
