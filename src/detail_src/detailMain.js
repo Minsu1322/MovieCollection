@@ -3,7 +3,7 @@ import { searchMovies } from "../all_src/searchMovies.js";
 import { detailInfo } from "./detailInfo.js";
 import { review } from "./review.js";
 
-toTheTop();
 searchMovies();
-detailInfo();
-review();
+toTheTop();
+const movieId = await detailInfo();
+review(movieId);

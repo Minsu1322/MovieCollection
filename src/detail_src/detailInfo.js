@@ -62,6 +62,7 @@ export const detailInfo = async () => {
       // console.log(response);
       // 출연진 정보를 가져와서 HTML에 추가
       const castList = response.cast.slice(0, 6); // 상위 5명의 출연진 정보만 표시
+      console.log(castList);
       const castContainer = document.getElementById("cast-container");
       castList.forEach((actor) => {
         const actorElement = document.createElement("div");

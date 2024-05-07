@@ -1,10 +1,7 @@
-import { detailInfo } from "./detailInfo.js";
 import { getReview } from "./getReview.js";
 import { getCurrentDate } from "./getCurrentDate.js";
 
-export const addReview = async () => {
-  const movieId = await detailInfo();
-
+export const addReview = async (movieId) => {
   const reviewText = document.querySelector("#review-text");
   const reviewId = document.querySelector("#reviewId");
   const reviewPW = document.querySelector("#reviewPW");
@@ -23,13 +20,12 @@ export const addReview = async () => {
     score: reviewInputScore,
     text: reviewInput,
   };
-  // console.log(getCurrentDate());
 
   if (reviewInput && reviewInputId && reviewInputPW && reviewInputScore) {
     const reviews = JSON.parse(localStorage.getItem(movieId)) || [];
     reviews.push(userReview);
     localStorage.setItem(movieId, JSON.stringify(reviews));
-    getReview();
+    getReview(movieId);
   } else if (reviewInput && reviewInputId) {
     alert("비밀번호를 입력해주세요.");
   } else if (reviewInput && reviewInputPW) {

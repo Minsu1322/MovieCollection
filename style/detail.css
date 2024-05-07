@@ -209,6 +209,7 @@ footer p {
 }
 #cast-container {
   display: flex;
+  width: auto;
   justify-content: center;
   justify-content: space-around;
   flex-grow: 1;
