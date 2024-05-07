@@ -1,13 +1,17 @@
 import { beginToFirebase } from "./beginToFirebase2.js";
-import { collection, getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import {
+  query,
+  collection,
+  getDocs,
+  orderBy,
+} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
-// TODO: detailMain.js 파일에 함수 임포트 및 호출해야 함 -> O
-// TODO: 이때, detailInfo() 함수로부터 movieId(movie.id) 받아와야 함 -> O
-// TODO: 그러기 위해서는 detailInfo() 함수에서 movie.id를 리턴해야 함 -> O
 export const getReview = async (movieId) => {
   const db = beginToFirebase();
 
-  let docs = await getDocs(collection(db, `movie${movieId}`));
+  let docs = await getDocs(
+    query(collection(db, `movie${movieId}`), orderBy("date", "desc"))
+  );
   const $reviewList = document.querySelector(".review-list");
 
   docs.forEach((doc) => {
@@ -29,13 +33,20 @@ export const getReview = async (movieId) => {
           </div> 
           <div class="btn-box">
             <button id="fix-btn">수정</button>
-            <button id="fix-complete-btn">수정 완료</button>
-            <button id="delete-btn">삭제</button>
-            <div class="checkPW-box">
+            <div class="checkPW-box1">
               <div>비밀번호를 입력해주세요.</div>
               <div>
-                <input type="password" id="checkPW"></input>
-                <button id="checkPW-btn">입력</button>
+                <input type="password" id="checkPW1"></input>
+                <button id="checkPW-btn1">입력</button>
+              </div>
+            </div>
+            <button id="fix-complete-btn">수정 완료</button>
+            <button id="delete-btn">삭제</button>
+            <div class="checkPW-box2">
+              <div>비밀번호를 입력해주세요.</div>
+              <div>
+                <input type="password" id="checkPW2"></input>
+                <button id="checkPW-btn2">입력</button>
               </div>
             </div>
           </div>

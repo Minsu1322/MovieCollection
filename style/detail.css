@@ -102,15 +102,29 @@ footer p {
   display: grid;
   height: auto;
   width: 100;
-  background-color:khaki;
+  background-position: center;
+  background-size: cover;
 }
+
+.blur {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  /* filter: blur(10px);   */
+}
+
 .total {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: auto;
-  background-color: darkolivegreen;
+  position: relative;
+  background-color: transparent;
 }
+
+
+
+
 #detail-poster {
   width: 500px;
   height: 600px;
@@ -122,25 +136,31 @@ footer p {
 .rightpart {
   height: auto;
   /* margin-right: 50px; */
-  background-color: coral;
+  background-color: rgba(255, 255, 255, 0.363);
   padding: 10px;
   margin: 10px;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
 }
 .rightpart p {
   background-color: transparent;
 }
 #detail-title {
-  font-size: 50px;
+  font-size: 45px;
   font-family: impact, Charcoal, sans-serif;
   margin-top: 10px;
   margin-bottom: 20px;
   letter-spacing: 0.5px;
   height: auto;
-  background-color: brown;
+  display:inline-block;
+  /* background-color: rgba(255, 255, 255, 0.318); */
+  border-radius: 15px;
+  /* background-color: brown; */
 }
 .litleinfo {
   display: flex;
-  background-color: rgb(172, 172, 255);
+  background-color: transparent;
   height: 170px;
 }
 
@@ -173,6 +193,9 @@ footer p {
   height: 100%;
   object-fit: cover;
   overflow: hidden;
+  border-radius: 0px 13px 13px 0px;
+
+  
   
   /* object-fit: cover; */
   /* border-radius: 30px;
@@ -183,7 +206,8 @@ footer p {
   font-size: 110%;
   /* font-weight: bold; */
   height: 120px;
-  background-color: rgba(176, 104, 68, 0.496);
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.488);
   border-radius: 15px;
   border: 2px solid white;
   padding: 15px
@@ -213,7 +237,7 @@ footer p {
   justify-content: space-around;
   flex-grow: 1;
   padding: 30px;
-  background-color: cadetblue;
+  background-color: rgba(255, 255, 255, 0.378);
   border-radius: 20px;
 }
 .actor {

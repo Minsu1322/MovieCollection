@@ -1,5 +1,14 @@
+@font-face {
+  font-family: "SejonghospitalBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   background-color: bisque;
+  font-family: "SejonghospitalBold";
 }
 
 body {
@@ -65,11 +74,12 @@ img {
   margin-bottom: 15px; 
 
   display: flex;
-  position: sticky;
-  bottom: 20px;
+  position: fixed;
+  bottom: 30px;
   right: 10px;
 
   align-items: center;
   text-align: center;
   font-size: 16px;
+  
 }

@@ -7,14 +7,15 @@ import {
   where,
   limit,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import { openModal } from "./openModal2.js";
 
 export const deleteReview = (movieId) => {
   const db = beginToFirebase();
 
+  const $checkBtn = document.querySelector(".check-btn");
   const $reviewList = document.querySelector(".review-list");
 
   $reviewList.addEventListener("click", async (e) => {
-    e.preventDefault();
     if (e.target.id === "delete-btn") {
       const deleteComment =
         e.target.parentNode.parentNode.nextSibling.nextSibling.children[1]
@@ -30,21 +31,46 @@ export const deleteReview = (movieId) => {
 
       const rightPW = deleteData.docs[0].data().password;
 
-      const $checkPWBox = e.target.nextSibling.nextSibling;
-      $checkPWBox.style.display = "flex";
+      const $checkPWBox2 = e.target.nextSibling.nextSibling;
+      $checkPWBox2.style.display = "flex";
 
-      const $checkPW = $checkPWBox.querySelector("#checkPW");
-      const $checkPWBtn = $checkPWBox.querySelector("#checkPW-btn");
+      const $div = $checkPWBox2.querySelector("div");
+      const $checkPW2 = $checkPWBox2.querySelector("#checkPW2");
+      const $checkPWBtn2 = $checkPWBox2.querySelector("#checkPW-btn2");
 
-      $checkPWBtn.addEventListener("click", async (e) => {
-        e.preventDefault();
-        if ($checkPW.value === rightPW) {
+      $checkPW2.focus();
+
+      const clickHandler = async (e) => {
+        if (
+          e.target !== $checkPWBox2 &&
+          e.target !== $div &&
+          e.target !== $checkPW2 &&
+          e.target !== $checkPWBtn2 &&
+          e.target !== $checkBtn &&
+          e.target.id !== "delete-btn"
+        ) {
+          $checkPWBox2.style.display = "none";
+          $checkPW2.value = "";
+          $checkPWBtn2.removeEventListener("click", clickPWHandler);
+        }
+      };
+
+      document.addEventListener("click", clickHandler);
+
+      const clickPWHandler = async () => {
+        if ($checkPW2.value === rightPW) {
           await deleteDoc(deleteData.docs[0].ref);
           window.location.reload();
         } else {
-          alert("비밀번호가 일치하지 않습니다.");
+          await openModal("비밀번호가 일치하지 않습니다.");
+          $checkPW2.value = "";
+          $checkPW2.focus();
+          document.removeEventListener("click", clickHandler);
         }
-      });
+        document.addEventListener("click", clickHandler);
+      };
+
+      $checkPWBtn2.addEventListener("click", clickPWHandler);
     }
   });
 };

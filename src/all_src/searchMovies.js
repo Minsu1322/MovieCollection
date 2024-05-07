@@ -1,25 +1,36 @@
-export const searchMovies = () => {
-  const searchButton = document.querySelector("#search-btn");
-  const searchInput = document.getElementById("search-section-movie");
-  const searchForm = document.getElementById("search-section");
-  const cardSection = document.querySelectorAll("card");
+import { fetchMovieAPI } from "./fetchMovieAPI.js";
 
-  function filteredMovies(event) {
-    event.preventDefault();
-    const searchResult = searchInput.value;
+export const searchMovies = async () => {
+  const movieInfo = await fetchMovieAPI();
 
-    // 카드를 검색해서, display로 조정
-    const movieCards = document.querySelectorAll(".card");
+  let urlParams = new URLSearchParams(window.location.search);
+  let searchTerm = urlParams.get("query");
 
-    movieCards.forEach((card) => {
-      const title = card.querySelector("h1").textContent.toLowerCase();
-      if (title.includes(searchResult.toLowerCase())) {
-        card.style.display = "block"; // searchResult 포함하면 표시 / 아니면반대
-      } else {
-        card.style.display = "none";
-      }
-    });
-    
+  const $searchMovie = document.querySelector(".search-movie");
+  const $movieList = document.querySelector("#movie-list #movie-cards");
+
+  $searchMovie.textContent = `"${searchTerm}"로 검색한 결과입니다.`;
+  $movieList.innerHTML = "";
+
+  movieInfo.forEach((movie) => {
+    const title = movie.title.toLowerCase();
+    if (title.includes(searchTerm.toLowerCase())) {
+      let temp_html = `
+        <a href="./detailMovie2.html?id=${movie.id}" class="card">
+          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+            <h1>${movie.title}</h1>
+            <p>평점: ⭐️${movie.vote_average}</p>
+        </a>
+      `;
+      $movieList.innerHTML += temp_html;
+    }
+  });
+
+  if ($movieList.innerHTML === "") {
+    $movieList.innerHTML += `
+      <h1 class="search-h1">검색 결과가 없습니다.</h1>
+    `;
   }
-  searchForm.addEventListener("submit", filteredMovies);
 };
+
+searchMovies();
