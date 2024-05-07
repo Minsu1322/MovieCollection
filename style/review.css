@@ -33,15 +33,30 @@
 }
 
 .review-list {
-  border: 3px solid blue; /* 회색 경계선 */
+  /* background-color: ; */
   padding-top: 20px;
 }
 
 .review-list div {
-  height: 100px;
+  height: 120px;
   margin-bottom: 30px;
-  border: 2px solid red;
+  background-color: #7574be;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 20px;
 }
+#review-form{
+  background-color: #FF8B66;
+}
+#review-form input{
+  background-color: transparent;
+}
+
+#review-form input{
+  background-color: transparent;
+}
+
+
 
 .review-list span {
   margin-right: 0px;
@@ -52,4 +67,5 @@
   color: #fff; /* 흰색 */
   border: none;
   cursor: pointer;
+  padding: 5px
 }

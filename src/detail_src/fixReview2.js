@@ -40,6 +40,13 @@ export const fixReview = (movieId) => {
       const $checkPW = $checkPWBox.querySelector("#checkPW");
       const $checkPWBtn = $checkPWBox.querySelector("#checkPW-btn");
 
+      $checkPW.focus();
+
+      document.addEventListener("click", () => {
+        $checkPWBox.style.display = "none";
+        $checkPW.value = "";
+      });
+
       $checkPWBtn.addEventListener("click", async (e) => {
         e.preventDefault();
         if ($checkPW.value === rightPW) {
@@ -65,6 +72,7 @@ export const fixReview = (movieId) => {
           });
         } else {
           alert("비밀번호가 일치하지 않습니다.");
+          $checkPW.value = "";
         }
       });
     }

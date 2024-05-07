@@ -115,12 +115,13 @@ img {
 
   display: flex;
   position: sticky;
-  bottom: 20px;
+  bottom: 30px;
   right: 10px;
 
   align-items: center;
   text-align: center;
   font-size: 16px;
+  
 }
 
 
@@ -131,6 +132,7 @@ footer {
   line-height: 5px;
   text-align: center;
   align-content: center;
+  background-color: aqua;
 }
 
 footer p {
