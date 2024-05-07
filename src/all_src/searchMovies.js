@@ -5,14 +5,14 @@ export const searchMovies = async () => {
 
   let urlParams = new URLSearchParams(window.location.search);
   let searchTerm = urlParams.get("query");
-  console.log(searchTerm);
 
+  const $searchMovie = document.querySelector(".search-movie");
   const $movieList = document.querySelector("#movie-list #movie-cards");
 
+  $searchMovie.textContent = `"${searchTerm}"로 검색한 결과입니다.`;
   $movieList.innerHTML = "";
 
   movieInfo.forEach((movie) => {
-    console.log(movie);
     const title = movie.title.toLowerCase();
     if (title.includes(searchTerm.toLowerCase())) {
       let temp_html = `
@@ -25,6 +25,12 @@ export const searchMovies = async () => {
       $movieList.innerHTML += temp_html;
     }
   });
+
+  if ($movieList.innerHTML === "") {
+    $movieList.innerHTML += `
+      <h1 class="search-h1">검색 결과가 없습니다.</h1>
+    `;
+  }
 };
 
 searchMovies();

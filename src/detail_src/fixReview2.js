@@ -8,10 +8,12 @@ import {
   limit,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import { getCurrentDate } from "./getCurrentDate.js";
+import { openModal } from "./openModal2.js";
 
 export const fixReview = (movieId) => {
   const db = beginToFirebase();
 
+  const $checkBtn = document.querySelector(".check-btn");
   const $reviewList = document.querySelector(".review-list");
 
   $reviewList.addEventListener("click", async (e) => {
@@ -49,6 +51,7 @@ export const fixReview = (movieId) => {
           e.target !== $div &&
           e.target !== $checkPW1 &&
           e.target !== $checkPWBtn1 &&
+          e.target !== $checkBtn &&
           e.target.id !== "fix-btn"
         ) {
           $checkPWBox1.style.display = "none";
@@ -73,7 +76,7 @@ export const fixReview = (movieId) => {
           $checkFixComBtn.addEventListener("click", clickFixComBtnHandler);
           e.stopPropagation();
         } else {
-          alert("비밀번호가 일치하지 않습니다.");
+          await openModal("비밀번호가 일치하지 않습니다.");
           $checkPW1.value = "";
           $checkPW1.focus();
           document.removeEventListener("click", clickHandler);
