@@ -75,24 +75,24 @@
     <!-- 리뷰영역 -->
     <section class="review-container">
       <form id="review-form">
-        <label for="reviewId">작성자</label>
-        <input id="reviewId" type="text" />
-
-        <label for="reviewPW">비밀번호</label>
-        <input id="reviewPW" type="password" />
-
-        <label for="score">평점</label>
-        <select id="score">
-          <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
-          <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
-          <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
-          <option value="⭐️⭐️">⭐️⭐️</option>
-          <option value="⭐️">⭐️</option>
-        </select>
-        <br />
-
-        <textarea id="review-text" name="" cols="60" rows="8"></textarea>
-        <button class="submit-btn">작성</button>
+        <div class="name-pw-box">
+          <p>작성자&nbsp;&nbsp;<input id="reviewId" type="text" /></p>
+          <p>비밀번호&nbsp;&nbsp;<input id="reviewPW" type="password" /></p>
+          <p>
+            평점&nbsp;&nbsp;
+            <select id="score">
+              <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️">⭐️⭐️</option>
+              <option value="⭐️">⭐️</option>
+            </select>
+          </p>
+        </div>
+        <div class="comment-box">
+          <textarea id="review-text" name="" cols="60" rows="8"></textarea>
+          <button class="submit-btn">작성</button>
+        </div>
       </form>
 
       <!-- 리뷰리스트 -->

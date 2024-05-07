@@ -18,17 +18,20 @@
   flex-direction: column;
 }
 
-#review-form label {
-  display: block;
-  margin-bottom: 5px;
+.name-pw-box {
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-#review-form input[type="text"],
-#review-form input[type="password"],
+.name-pw-box input {
+  height: 20px;
+  font-size: 15px;
+}
+
 #review-form textarea {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 10px;
+  width: 80%;
 }
 
 .submit-btn {
@@ -39,6 +42,10 @@
   cursor: pointer;
 }
 
+.review-list {
+  border: 3px solid blue; /* 회색 경계선 */
+  padding-top: 20px;
+}
 
 
 /* 리뷰리스트 내용 */
