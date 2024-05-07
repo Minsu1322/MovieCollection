@@ -1,5 +1,6 @@
 import { detailInfo } from "./detailInfo.js";
 import { getReview } from "./getReview.js";
+import { getCurrentDate } from "./getCurrentDate.js";
 
 export const addReview = async () => {
   const movieId = await detailInfo();
@@ -13,13 +14,16 @@ export const addReview = async () => {
   const reviewInputId = reviewId.value;
   const reviewInputPW = reviewPW.value;
   const reviewInputScore = reviewScore.value;
+  const reviewCurrentDate = getCurrentDate();
 
   let userReview = {
     ID: reviewInputId,
     PW: reviewInputPW,
-    text: reviewInput,
+    date: reviewCurrentDate,
     score: reviewInputScore,
+    text: reviewInput,
   };
+  // console.log(getCurrentDate());
 
   if (reviewInput && reviewInputId && reviewInputPW && reviewInputScore) {
     const reviews = JSON.parse(localStorage.getItem(movieId)) || [];

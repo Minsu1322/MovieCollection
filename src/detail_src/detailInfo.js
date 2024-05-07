@@ -40,7 +40,6 @@ export const detailInfo = async () => {
   // console.log(movieObj);
 
   // 출연진 정보 추가
-  // 출연진 정보 추가
   const castApiKey = "23317d8f45886930254ccd062e0ed8a1"; // 출연진 정보 API
   const castOptions = {
     method: "GET",

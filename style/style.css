@@ -35,13 +35,13 @@ a {
   margin-bottom: 80px;
 }
 
-.search-btn {
+/* .search-btn {
   border-radius: 5px;
   background-color: bisque;
   padding: 5px;
   text-align: center;
   font-weight: bolder;
-}
+} */
 
 label {
   font-size: 20px;
@@ -123,8 +123,6 @@ img {
   font-size: 16px;
 }
 
-
-
 footer {
   margin-top: 40px;
   height: 15vh;
@@ -136,4 +134,3 @@ footer {
 footer p {
   font-size: 12px;
 }
-

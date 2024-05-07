@@ -35,13 +35,13 @@ a {
   margin-bottom: 80px;
 }
 
-.search-btn {
+/* .search-btn {
   border-radius: 5px;
   background-color: bisque;
   padding: 5px;
   text-align: center;
   font-weight: bolder;
-}
+} */
 
 label {
   font-size: 20px;
@@ -102,7 +102,7 @@ footer p {
   display: grid;
   height: auto;
   width: 100;
-  background-color:khaki;
+  background-color: khaki;
 }
 .total {
   display: flex;
@@ -173,7 +173,7 @@ footer p {
   height: 100%;
   object-fit: cover;
   overflow: hidden;
-  
+
   /* object-fit: cover; */
   /* border-radius: 30px;
   border: 5px solid white; */
@@ -186,7 +186,7 @@ footer p {
   background-color: rgba(176, 104, 68, 0.496);
   border-radius: 15px;
   border: 2px solid white;
-  padding: 15px
+  padding: 15px;
 }
 
 #video-container {
@@ -226,9 +226,9 @@ footer p {
 }
 
 .actor-image {
-  width: 150px; 
-  height: auto; 
-  margin: 10px; 
+  width: 150px;
+  height: auto;
+  margin: 10px;
   border: 2px solid white;
   border-radius: 15px;
 }

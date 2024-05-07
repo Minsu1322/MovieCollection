@@ -1,8 +1,10 @@
 export const searchMovies = () => {
-  const searchButton = document.querySelector("#search-btn");
+  // const searchButton = document.querySelector("#search-btn");
   const searchInput = document.getElementById("search-section-movie");
   const searchForm = document.getElementById("search-section");
-  const cardSection = document.querySelectorAll("card");
+  // const cardSection = document.querySelectorAll("card");
+  // console.log(searchInput);
+  // console.log(searchForm);
 
   function filteredMovies(event) {
     event.preventDefault();
@@ -19,7 +21,6 @@ export const searchMovies = () => {
         card.style.display = "none";
       }
     });
-    
   }
   searchForm.addEventListener("submit", filteredMovies);
 };

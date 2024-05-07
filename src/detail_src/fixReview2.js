@@ -7,7 +7,7 @@ import {
   where,
   limit,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-import { getCurrentDate } from "./getCurrentDate2.js";
+import { getCurrentDate } from "./getCurrentDate.js";
 
 export const fixReview = (movieId) => {
   const db = beginToFirebase();
