@@ -1,5 +1,8 @@
 import { beginToFirebase } from "./beginToFirebase2.js";
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import {
+  collection,
+  addDoc,
+} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import { getCurrentDate } from "./getCurrentDate2.js";
 
 // TODO: detailMain.js 파일에 함수 임포트 및 호출해야 함 -> O
