@@ -36,6 +36,18 @@ export const detailInfo = async () => {
       `https://image.tmdb.org/t/p/w500${movieObj.backdrop_path}`
     );
 
+
+    const poster2Src = document
+    .getElementById("detail-poster2")
+    .getAttribute("src");
+
+  // total 클래스 요소 가져오기
+  const totalElement = document.querySelector(".blur");
+
+  // 배경 이미지 설정
+  totalElement.style.backgroundImage = "url('" + poster2Src + "')";
+
+
   // 출연진 정보 추가
   const castApiKey = "23317d8f45886930254ccd062e0ed8a1"; // 출연진 정보 API
   const castOptions = {
