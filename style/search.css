@@ -22,7 +22,7 @@ a {
 }
 
 /* 헤더영역 */
-#logo div {
+/* #logo div {
   text-align: center;
   margin-left: auto;
   border: 5px dashed;
@@ -36,7 +36,7 @@ a {
   font-size: 70px;
 }
 
-/* 검색영역 & 버튼 */
+검색영역 & 버튼
 #search-section div {
   border-style: none;
   margin-top: 20px;
@@ -50,7 +50,7 @@ a {
   padding: 5px;
   text-align: center;
   font-weight: bolder;
-}
+} */
 
 label {
   font-size: 20px;

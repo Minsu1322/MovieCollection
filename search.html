@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/search.css" />
+    <link rel="stylesheet" href="./style/header.css" />
+  <link rel="stylesheet" href="./style/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,22 +18,23 @@
   <body>
     <!-- 헤더영역 -->
     <header id="logo">
-      <div>
-        <a href="./index.html" id="home">Movie-Collection</a>
-      </div>
-
-      <!-- 영화 검색 -->
-      <form id="search-section">
-        <div>
-          <label for="search-section-movie">영화검색</label>
-          <input
-            id="search-section-movie"
-            type="text"
-            placeholder="제목을 입력해주세요!"
-          />
+      <div id="home">
+        <a href="./index.html" id="home">
+          <img id="logoimg" src="images/logo.png" href="./index.html">
+          6Flix
+        </a>
+        <form id="search-section">    
+          <input id="search-section-movie" type="text" placeholder="제목을 입력해주세요!" />
           <button id="search-btn">검색</button>
-        </div>
-      </form>
+        </form>
+           <select id="sort">
+          <option value="" disabled selected style="display: none">
+            정렬 선택
+          </option>
+          <option value="name">이름순</option>
+          <option value="score">평점순</option>
+        </select>
+      </div>
     </header>
 
     <!-- 영화 목록 -->

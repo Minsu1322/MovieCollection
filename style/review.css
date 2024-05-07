@@ -1,11 +1,23 @@
+@font-face {
+  font-family: "SejonghospitalBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+*{
+  font-family: "'NEXON Lv1 Gothic OTF';";
+}
+
 .review-container {
   margin-top: 20px;
   padding: 20px;
-  border: 3px solid blueviolet;
   display: flex;
   flex-direction: column;
   background-color: #f5d0a9; /* 밝은 주황색 배경색 */
   font-size: 18px;
+  border-radius: 20px;
 }
 
 #score {
@@ -15,20 +27,23 @@
 #review-form {
   margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
 }
 
-#review-form label {
-  display: block;
-  margin-bottom: 5px;
+.name-pw-box {
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-#review-form input[type="text"],
-#review-form input[type="password"],
+.name-pw-box input {
+  height: 20px;
+  font-size: 15px;
+}
+
 #review-form textarea {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 10px;
+  width: 80%;
 }
 
 .submit-btn {
@@ -39,6 +54,10 @@
   cursor: pointer;
 }
 
+.review-list {
+  padding-top: 20px;
+  background-color: transparent;
+}
 
 
 /* 리뷰리스트 내용 */
@@ -50,10 +69,13 @@
 .review-list div {
   height: 120px;
   margin-bottom: 30px;
-  background-color: #7574be;
-  border-radius: 10px;
+  background-color: #8f8ddb;
+  border-radius: 13px;
   padding: 5px;
-  font-size: 20px;
+  font-size: 15px;
+  color: white;
+  line-height: 40px;
+  font-weight: lighter;
 }
 
 .review-list span {
@@ -67,6 +89,24 @@
   color: #fff; /* 흰색 */
   border: none;
   cursor: pointer;
-  padding: 5px
+  padding: 2px;
+  margin-left: 5px;
+  border-radius: 3px;
 }
 
+.arrowBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: auto;
+
+  display: flex;
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  
+}
