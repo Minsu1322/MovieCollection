@@ -41,7 +41,7 @@ a {
   border-style: none;
   margin-top: 20px;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .search-btn {
@@ -130,7 +130,6 @@ img {
   align-items: center;
   text-align: center;
   font-size: 16px;
-  
 }
 
 footer {
@@ -144,4 +143,16 @@ footer {
 
 footer p {
   font-size: 12px;
+}
+
+.search-movie {
+  font-size: 30px;
+  text-align: center;
+}
+
+.search-h1 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-size: 50px;
+  font-weight: bold;
 }
