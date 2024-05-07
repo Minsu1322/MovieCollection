@@ -1,5 +1,7 @@
 /* 헤더영역 */
-
+body{
+    margin: 0px;
+}
 #logo {
     position: sticky;
     top: 0;
