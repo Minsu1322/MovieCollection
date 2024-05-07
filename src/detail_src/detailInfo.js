@@ -64,7 +64,7 @@ export const detailInfo = async () => {
         const actorElement = document.createElement("div");
         actorElement.classList.add("actor");
         actorElement.innerHTML = `
-      <a href="https://www.google.com/search?q=${actor.name}" target="_blank"><img class="actor-image" src="https://image.tmdb.org/t/p/w500${actor.profile_path}" alt="${actor.name}"></a>
+      <a href="https://www.google.com/search?q=${actor.name}"target = "_blank"><img class="actor-image" src="https://image.tmdb.org/t/p/w500${actor.profile_path}" alt="${actor.name}"></a>
       <div style="background-color: transparent" class="actor-info">
         <p class="actor-name">${actor.name}</p>
         <p class="actor-character">${actor.character} 역</p>
