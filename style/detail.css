@@ -12,7 +12,7 @@ a {
   color: black;
 }
 
-/* 헤더영역 */
+/* 헤더영역
 #logo div {
   text-align: center;
   margin-left: auto;
@@ -25,10 +25,10 @@ a {
   font-family: "Jersey 15", sans-serif;
   font-style: normal;
   font-size: 70px;
-}
+} */
 
 /* 검색영역 & 버튼 */
-#search-section div {
+/* #search-section div {
   border-style: none;
   margin-top: 20px;
   text-align: center;
@@ -64,7 +64,7 @@ select {
   height: 30px;
   width: 90px;
   font-size: 15px;
-}
+} */
 
 /* 위로 */
 .arrowBtn {
@@ -122,9 +122,6 @@ footer p {
   background-color: transparent;
 }
 
-
-
-
 #detail-poster {
   width: 500px;
   height: 600px;
@@ -153,7 +150,7 @@ footer p {
   margin-bottom: 20px;
   letter-spacing: 0.5px;
   height: auto;
-  display:inline-block;
+  display: inline-block;
   /* background-color: rgba(255, 255, 255, 0.318); */
   border-radius: 15px;
   /* background-color: brown; */
@@ -195,8 +192,6 @@ footer p {
   overflow: hidden;
   border-radius: 0px 13px 13px 0px;
 
-  
-  
   /* object-fit: cover; */
   /* border-radius: 30px;
   border: 5px solid white; */
@@ -210,7 +205,7 @@ footer p {
   background-color: rgba(255, 255, 255, 0.488);
   border-radius: 15px;
   border: 2px solid white;
-  padding: 15px
+  padding: 15px;
 }
 
 #video-container {
@@ -250,9 +245,9 @@ footer p {
 }
 
 .actor-image {
-  width: 150px; 
-  height: auto; 
-  margin: 10px; 
+  width: 150px;
+  height: auto;
+  margin: 10px;
   border: 2px solid white;
   border-radius: 15px;
 }
