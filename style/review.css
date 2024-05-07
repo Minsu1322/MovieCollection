@@ -7,7 +7,7 @@
 }
 
 *{
-  font-family: "SejonghospitalBold";
+  font-family: "'NEXON Lv1 Gothic OTF';";
 }
 
 .review-container {
@@ -69,8 +69,8 @@
 .review-list div {
   height: 120px;
   margin-bottom: 30px;
-  background-color: #7574be;
-  border-radius: 10px;
+  background-color: #8f8ddb;
+  border-radius: 13px;
   padding: 5px;
   font-size: 15px;
   color: white;
@@ -89,7 +89,9 @@
   color: #fff; /* 흰색 */
   border: none;
   cursor: pointer;
-  padding: 5px
+  padding: 2px;
+  margin-left: 5px;
+  border-radius: 3px;
 }
 
 .arrowBtn {

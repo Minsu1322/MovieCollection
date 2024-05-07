@@ -22,7 +22,7 @@ a {
 }
 
 /* 헤더영역 */
-#logo div {
+/* #logo div {
   text-align: center;
   margin-left: auto;
   border: 5px dashed;
@@ -50,7 +50,7 @@ a {
   padding: 5px;
   text-align: center;
   font-weight: bolder;
-}
+} */
 
 label {
   font-size: 20px;
