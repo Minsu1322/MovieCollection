@@ -1,11 +1,23 @@
+@font-face {
+  font-family: "SejonghospitalBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+*{
+  font-family: "SejonghospitalBold";
+}
+
 .review-container {
   margin-top: 20px;
   padding: 20px;
-  border: 3px solid blueviolet;
   display: flex;
   flex-direction: column;
   background-color: #f5d0a9; /* 밝은 주황색 배경색 */
   font-size: 18px;
+  border-radius: 20px;
 }
 
 #score {
@@ -15,7 +27,7 @@
 #review-form {
   margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
 }
 
 .name-pw-box {
@@ -43,8 +55,8 @@
 }
 
 .review-list {
-  border: 3px solid blue; /* 회색 경계선 */
   padding-top: 20px;
+  background-color: transparent;
 }
 
 
@@ -60,7 +72,10 @@
   background-color: #7574be;
   border-radius: 10px;
   padding: 5px;
-  font-size: 20px;
+  font-size: 15px;
+  color: white;
+  line-height: 40px;
+  font-weight: lighter;
 }
 
 .review-list span {
