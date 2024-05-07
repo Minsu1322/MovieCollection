@@ -13,8 +13,12 @@
   padding: 10px;
   border-radius: 10px;
   border: 2px solid black !important;
-  background-color: rgb(234, 230, 230) ;
+  background-color: white;
   font-size: 20px;
+}
+
+.modal-box .message {
+  background-color: white;
 }
 
 .modal-box .check-btn {
