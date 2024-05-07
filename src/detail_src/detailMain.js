@@ -1,9 +1,9 @@
-import { searchMovies } from "../all_src/searchMovies.js";
+import { goToSearchPage } from "../all_src/goToSearchPage.js";
 import { toTheTop } from "../all_src/toTheTop.js";
 import { review } from "./review.js";
 import { detailInfo } from "./detailInfo.js";
 
-searchMovies();
+goToSearchPage();
 toTheTop();
 detailInfo();
 review();

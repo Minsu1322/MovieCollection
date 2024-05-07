@@ -97,7 +97,7 @@
   display: none;
 }
 
-.checkPW-box {
+.checkPW-box1, .checkPW-box2 {
   display: none;
   position: absolute;
   /* float: right; */
