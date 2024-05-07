@@ -5,17 +5,12 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import { getCurrentDate } from "./getCurrentDate.js";
 
-// TODO: detailMain.js 파일에 함수 임포트 및 호출해야 함 -> O
-// TODO: 이때, detailInfo() 함수로부터 movieId(movie.id) 받아와야 함 -> O
-// TODO: 그러기 위해서는 detailInfo() 함수에서 movie.id를 리턴해야 함 -> O
 export const addReview = (movieId) => {
   const db = beginToFirebase();
 
-  // TODO: html 파일 보고 알맞은 선택자로 바꿔야 함 -> O
   const $submitBtn = document.querySelector(".submit-btn");
   const $username = document.querySelector("#reviewId");
   const $password = document.querySelector("#reviewPW");
-  // TODO: html 파일에 평점 넣는 곳 추가해야 함 -> O
   const $score = document.querySelector("#score");
   const $comment = document.querySelector("#review-text");
 
