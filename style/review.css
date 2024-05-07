@@ -5,10 +5,17 @@
   display: flex;
   flex-direction: column;
   background-color: #f5d0a9; /* 밝은 주황색 배경색 */
+  font-size: 18px;
+}
+
+#score {
+  width: 135px;
 }
 
 #review-form {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 #review-form label {

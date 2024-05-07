@@ -7,7 +7,7 @@ import {
   where,
   limit,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-import { getCurrentDate } from "./getCurrentDate2.js";
+import { getCurrentDate } from "./getCurrentDate.js";
 
 export const fixReview = (movieId) => {
   const db = beginToFirebase();
@@ -30,7 +30,8 @@ export const fixReview = (movieId) => {
 
       const rightPW = fixData.docs[0].data().password;
 
-      const $checkFixComBtn = e.target.nextSibling.nextSibling.nextSibling.nextSibling;
+      const $checkFixComBtn =
+        e.target.nextSibling.nextSibling.nextSibling.nextSibling;
 
       const $checkPWBox1 = e.target.nextSibling.nextSibling;
       $checkPWBox1.style.display = "flex";
@@ -63,8 +64,7 @@ export const fixReview = (movieId) => {
         if ($checkPW1.value === rightPW) {
           $checkPWBox1.style.display = "none";
           $checkFixComBtn.style.display = "block";
-          $checkPWBox1.previousSibling.previousSibling.style.display =
-            "none";
+          $checkPWBox1.previousSibling.previousSibling.style.display = "none";
           reviewBottom.children[1].style.display = "none";
           reviewBottom.children[2].style.display = "flex";
           const textLength = reviewBottom.children[2].value.length;
@@ -94,7 +94,6 @@ export const fixReview = (movieId) => {
         });
         window.location.reload();
       };
-
     }
   });
 };

@@ -1,5 +1,14 @@
+@font-face {
+  font-family: "SejonghospitalBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   background-color: bisque;
+  font-family: "SejonghospitalBold";
 }
 
 a {
@@ -123,8 +132,6 @@ img {
   font-size: 16px;
 }
 
-
-
 footer {
   margin-top: 40px;
   height: 15vh;
@@ -136,4 +143,3 @@ footer {
 footer p {
   font-size: 12px;
 }
-
