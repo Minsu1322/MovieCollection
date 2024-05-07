@@ -1,5 +1,6 @@
 * {
   background-color: bisque;
+  font-family: 'NEXON Lv1 Gothic OTF';
 }
 
 a {
@@ -130,9 +131,11 @@ footer p {
   z-index: 1;
   border-radius: 12px;
 }
+
 .rightpart p {
   background-color: transparent;
 }
+
 #detail-title {
   font-size: 45px;
   font-family: impact, Charcoal, sans-serif;
