@@ -1,4 +1,5 @@
 import { getReview } from "./getReview.js";
+import { openModal } from "./openModal.js";
 
 export const deleteReview = async (reviewInputId, reviewInputPW, movieId) => {
   const reviews = JSON.parse(localStorage.getItem(movieId));
@@ -10,6 +11,6 @@ export const deleteReview = async (reviewInputId, reviewInputPW, movieId) => {
     localStorage.setItem(movieId, JSON.stringify(reviews));
     getReview(movieId);
   } else {
-    alert("비밀번호가 일치하지 않거나 리뷰가 존재하지 않습니다.");
+    openModal("비밀번호가 일치하지 않거나 리뷰가 존재하지 않습니다.");
   }
 };
