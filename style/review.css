@@ -50,16 +50,13 @@
   cursor: pointer;
 }
 
-.review-list {
-  padding-top: 20px;
-  background-color: transparent;
-}
-
-
 /* 리뷰리스트 내용 */
 
 .review-list {
   padding-top: 20px;
+  overflow: scroll;
+  background-color: transparent;
+
 }
 
 .review-list div {
