@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/header.css" />
+    <link rel="stylesheet" href="./style/detail.css" />
+    <link rel="stylesheet" href="./style/review2.css" />
+    <link rel="stylesheet" href="./style/modal.css" />
+    <link rel="stylesheet" href="./style/detail-review.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./style/header.css" />
-  <link rel="stylesheet" href="./style/detail.css" />
-  <link rel="stylesheet" href="./style/review2.css" />
-  <link rel="stylesheet" href="./style/modal.css">
-  <link rel="stylesheet" href="./style/detail-review.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet" />
+    <script type="module" src="./src/detail_src/detailMain2.js"></script>
 
-  <script type="module" src="./src/detail_src/detailMain2.js"></script>
+    <title>project1</title>
+  </head>
 
-  <title>project1</title>
-</head>
-
-<body>
-  <!-- 헤더영역 -->
-  <header id="logo">
-
-    <!-- 모달 창 -->
-    <!-- <div class="modal-box">
+  <body>
+    <!-- 헤더영역 -->
+    <header id="logo">
+      <!-- 모달 창 -->
+      <!-- <div class="modal-box">
       <p class="message"></p>
       <button class="check-btn">확인</button>
     </div>
@@ -35,99 +39,94 @@
       <a href="./index.html" id="home"></a>
     </div> -->
 
-    <div id="home">
-      <a href="./index.html" id="home">
-        <img id="logoimg" src="images/logo.png" href="./index.html">
-        6Flix
-      </a>
-      <form id="search-section">    
-        <input id="search-section-movie" type="text" placeholder="제목을 입력해주세요!" />
-        <button id="search-btn">검색</button>
-      </form>
-         <select id="sort">
-        <option value="" disabled selected style="display: none">
-          정렬 선택
-        </option>
-        <option value="name">이름순</option>
-        <option value="score">평점순</option>
-      </select>
-    </div>
-  </header>    
-    
-  <!-- 상세설명 -->
-  <section class="detail-container">
-    <div class="blur-effect"></div>
-    <div class="blur">
-      <div class="total">
-        <img id="detail-poster" alt="" />
-        <div class="rightpart">
-          <p id="detail-title"></p>
-          <div class="litleinfo">
-            <div class="movieinfo">
-              <p id="detail-average"></p>
-              <p id="detail-release"></p>
-              <p id="detail-popular"></p>
+      <div id="home">
+        <a href="./index.html" id="home">
+          <img id="logoimg" src="images/logo.png" href="./index.html" />
+          6Flix
+        </a>
+        <form id="search-section">
+          <input
+            id="search-section-movie"
+            type="text"
+            placeholder="제목을 입력해주세요!"
+          />
+          <button id="search-btn" style="margin-right: 30px">검색</button>
+        </form>
+      </div>
+    </header>
+
+    <!-- 상세설명 -->
+    <section class="detail-container">
+      <div class="blur-effect"></div>
+      <div class="blur">
+        <div class="total">
+          <img id="detail-poster" alt="" />
+          <div class="rightpart">
+            <p id="detail-title"></p>
+            <div class="litleinfo">
+              <div class="movieinfo">
+                <p id="detail-average"></p>
+                <p id="detail-release"></p>
+                <p id="detail-popular"></p>
+              </div>
+              <div class="movieclip">
+                <p id="clip">MOVIE CLIP</p>
+                <img id="detail-poster2" alt="" />
+              </div>
             </div>
-            <div class="movieclip">
-              <p id="clip">MOVIE CLIP</p>
-              <img id="detail-poster2" alt="" />
-            </div>
+            <p id="detail-overview">줄거리</p>
+            <div id="video-container"></div>
           </div>
-          <p id="detail-overview">줄거리</p>
-          <div id="video-container"></div>
+        </div>
+
+        <div class="cast-box">
+          <p id="cast">CAST</p>
+          <div id="cast-container"></div>
         </div>
       </div>
+    </section>
 
-      <div class="cast-box">
-        <p id="cast">CAST</p>
-        <div id="cast-container"></div>
-      </div>
-    </div>
-  </section>
+    <!-- 리뷰영역 -->
+    <section class="review-container">
+      <form id="review-form">
+        <div class="name-pw-box">
+          <p>작성자&nbsp;&nbsp;<input id="reviewId" type="text" /></p>
+          <p>비밀번호&nbsp;&nbsp;<input id="reviewPW" type="password" /></p>
+          <p>
+            평점&nbsp;&nbsp;
+            <select id="score">
+              <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️">⭐️⭐️</option>
+              <option value="⭐️">⭐️</option>
+            </select>
+          </p>
+        </div>
+        <div class="comment-box">
+          <textarea id="review-text" name="" cols="60" rows="8"></textarea>
+          <button class="submit-btn">작성</button>
+        </div>
+      </form>
 
-  <!-- 리뷰영역 -->
-  <section class="review-container">
-    <form id="review-form">
-      <div class="name-pw-box">
-        <p>작성자&nbsp;&nbsp;<input id="reviewId" type="text" /></p>
-        <p>비밀번호&nbsp;&nbsp;<input id="reviewPW" type="password" /></p>
-        <p>
-          평점&nbsp;&nbsp;
-          <select id="score">
-            <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
-            <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
-            <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
-            <option value="⭐️⭐️">⭐️⭐️</option>
-            <option value="⭐️">⭐️</option>
-          </select>
-        </p>
-      </div>
-      <div class="comment-box">
-        <textarea id="review-text" name="" cols="60" rows="8"></textarea>
-        <button class="submit-btn">작성</button>
-      </div>
-    </form>
+      <!-- 리뷰리스트 -->
+      <div class="review-list"></div>
+    </section>
 
-    <!-- 리뷰리스트 -->
-    <div class="review-list"></div>
-  </section>
+    <!-- 화살표 -->
+    <button class="arrowBtn">
+      top
+      <i class="arrow-up"></i>
+    </button>
 
-  <!-- 화살표 -->
-  <button class="arrowBtn">
-    top
-    <i class="arrow-up"></i>
-  </button>
-
-  <!-- 푸터영역 -->
-  <footer id=footerM>
-    <p>탕수육조 Tangsoo6</p>
-    <p>유수지 곽현정 김민수 김현진 이보영 황승현</p>
-    <p>phone: 010-1234-5678</p>
-    <p>email: Tangsoo6@Sparta.com</p>
-    <br />
-    <p id="footerS">copyright ⓒ 2024 Tangsoo6 All right reserved.</p>
-  </footer>
-
-</body>
-
+    <!-- 푸터영역 -->
+    <footer id="footerM">
+      <p>탕수육조 Tangsoo6</p>
+      <p>유수지 곽현정 김민수 김현진 이보영 황승현</p>
+      <p>phone: 010-1234-5678</p>
+      <p>email: Tangsoo6@Sparta.com</p>
+      <br />
+      <p id="footerS">copyright ⓒ 2024 Tangsoo6 All right reserved.</p>
+    </footer>
+  </body>
 </html>
