@@ -109,7 +109,7 @@ a {
   font-size: 45px;
   font-family: impact, Charcoal, sans-serif;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   letter-spacing: 0.5px;
   height: auto;
   display: inline-block;
@@ -125,14 +125,16 @@ a {
 
 .movieinfo {
   font-family: "Orbit", sans-serif;
-  font-size: 110%;
-  font-weight: bold;
+  font-size: 90%;
+  font-weight: 700;
   height: 100px;
   background-color: transparent;
 }
 
 .movieclip {
+  margin-top: 10px;
   display: flex;
+  position: relative;
   margin-left: 40px;
   border: 2px solid black;
   border-radius: 15px;
@@ -141,7 +143,8 @@ a {
 }
 
 #clip {
-  margin: 2%;
+  
+  margin: 1%;
   font-family: impact, Charcoal, sans-serif;
   writing-mode: vertical-lr;
   text-align: center;
@@ -160,7 +163,7 @@ a {
 }
 #detail-overview {
   font-family: Arial, sans-serif;
-  font-size: 110%;
+  font-size: 100%;
   /* font-weight: bold; */
   height: 120px;
   color: rgb(0, 0, 0);
