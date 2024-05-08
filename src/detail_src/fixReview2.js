@@ -8,7 +8,7 @@ import {
   limit,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import { getCurrentDate } from "./getCurrentDate.js";
-import { openModal } from "./openModal2.js";
+import { openModal } from "./openModal.js";
 
 export const fixReview = (movieId) => {
   const db = beginToFirebase();
@@ -57,7 +57,7 @@ export const fixReview = (movieId) => {
           $checkPWBox1.style.display = "none";
           $checkPW1.value = "";
           $checkPWBtn1.removeEventListener("click", clickPWHandler);
-          $checkPW1.removeEventListener("keydown", clickPWHandler, e);
+          // $checkPW1.removeEventListener("keydown", clickPWHandler, e);
         }
       };
 
@@ -65,7 +65,7 @@ export const fixReview = (movieId) => {
 
       const clickPWHandler = async (e) => {
         e.preventDefault();
-        if(e === undefined || e === null || e.key === "enter") {
+        // if(e === undefined || e === null || e.key === "enter") {
           if ($checkPW1.value === rightPW) {
             $checkPWBox1.style.display = "none";
             $checkFixComBtn.style.display = "block";
@@ -83,12 +83,12 @@ export const fixReview = (movieId) => {
             $checkPW1.focus();
             document.removeEventListener("click", clickHandler);
           }
-        }
+        // }
         document.addEventListener("click", clickHandler);
       };
 
       $checkPWBtn1.addEventListener("click", clickPWHandler);
-      $checkPW1.addEventListener("keydown", clickPWHandler, e);
+      // $checkPW1.addEventListener("keydown", clickPWHandler, e);
 
       const clickFixComBtnHandler = async () => {
         e.preventDefault();

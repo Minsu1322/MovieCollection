@@ -1,5 +1,6 @@
 import { getReview } from "./getReview.js";
 import { getCurrentDate } from "./getCurrentDate.js";
+import { openModal } from "./openModal.js";
 
 export const addReview = async (movieId) => {
   const reviewText = document.querySelector("#review-text");
@@ -27,12 +28,12 @@ export const addReview = async (movieId) => {
     localStorage.setItem(movieId, JSON.stringify(reviews));
     getReview(movieId);
   } else if (reviewInput && reviewInputId) {
-    alert("비밀번호를 입력해주세요.");
+    openModal("비밀번호를 입력해주세요.");
   } else if (reviewInput && reviewInputPW) {
-    alert("아이디를 입력해주세요.");
+    openModal("아이디를 입력해주세요.");
   } else if (reviewInput) {
-    alert("아이디와 비밀번호를 입력해주세요.");
+    openModal("아이디와 비밀번호를 입력해주세요.");
   } else {
-    alert("리뷰를 입력해주세요.");
+    openModal("리뷰를 입력해주세요.");
   }
 };
