@@ -38,7 +38,7 @@ a {
   font-style: normal;
   box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.3);
   transition: scale 0.45s;
-  background-color: rgb(105, 187, 168);
+  background-color: #ff9e7d;
 }
 .card:hover {
   scale: 107%;
