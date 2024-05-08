@@ -10,9 +10,9 @@ body {
   font-family: "Kanit", sans-serif;
 }
 
-#logo div {
-  align-items: center;
-  display: flex;
+#logo > div:not(:first-child) {
+    align-items: center;
+    display: flex;
 }
 
 #logo #home {
