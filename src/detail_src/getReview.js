@@ -7,8 +7,9 @@ export const getReview = async (movieId) => {
   reviews.forEach((review) => {
     const id = review["ID"];
     const text = review["text"];
+    const date = review["date"];
     const score = review["score"];
-    let temp_html = `<div>&ensp;${id} &ensp; 별점: ${score} </br>&ensp;리뷰내용: ${text}
+    let temp_html = `<div>${id} &ensp; ${date} &ensp; ${score} <br> &ensp;${text}
       <button class="delete-btn" data-id="${id}">삭제</button></div>`;
     reviewList.innerHTML += temp_html;
   });
