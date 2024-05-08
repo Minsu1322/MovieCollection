@@ -28,12 +28,16 @@ export const addReview = async (movieId) => {
     localStorage.setItem(movieId, JSON.stringify(reviews));
     getReview(movieId);
   } else if (reviewInput && reviewInputId) {
-    openModal("비밀번호를 입력해주세요.");
+    await openModal("비밀번호를 입력해주세요.");
+    reviewPW.focus();
   } else if (reviewInput && reviewInputPW) {
-    openModal("아이디를 입력해주세요.");
+    await openModal("아이디를 입력해주세요.");
+    reviewId.focus();
   } else if (reviewInput) {
-    openModal("아이디와 비밀번호를 입력해주세요.");
+    await openModal("아이디와 비밀번호를 입력해주세요.");
+    reviewId.focus();
   } else {
-    openModal("리뷰를 입력해주세요.");
+    await openModal("리뷰를 입력해주세요.");
+    reviewText.focus();
   }
 };

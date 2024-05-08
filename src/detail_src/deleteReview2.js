@@ -7,7 +7,7 @@ import {
   where,
   limit,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-import { openModal } from "./openModal2.js";
+import { openModal } from "./openModal.js";
 
 export const deleteReview = (movieId) => {
   const db = beginToFirebase();
