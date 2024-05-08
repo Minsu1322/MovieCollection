@@ -13,6 +13,7 @@ export const getReview = async (movieId) => {
     query(collection(db, `movie${movieId}`), orderBy("date", "desc"))
   );
   const $reviewList = document.querySelector(".review-list");
+  $reviewList.innerHTML = "";
 
   docs.forEach((doc) => {
     let row = doc.data();
@@ -28,33 +29,33 @@ export const getReview = async (movieId) => {
       <li class="review-box">
         <div class="review-top">
           <div class="name-date-box">
-            <p id="username">${username}</p>
-            <p id="date">${date}</p>
+            <p class="username">${username}</p>
+            <p class="date">${date}</p>
           </div> 
           <div class="btn-box">
-            <button id="fix-btn">수정</button>
+            <button class="fix-complete-btn">수정 완료</button>
+            <button class="fix-btn">수정</button>
             <div class="checkPW-box1">
               <div>비밀번호를 입력해주세요.</div>
               <div>
-                <input type="password" id="checkPW1"></input>
-                <button id="checkPW-btn1">입력</button>
+                <input type="password" class="checkPW1"></input>
+                <button class="checkPW-btn1">입력</button>
               </div>
             </div>
-            <button id="fix-complete-btn">수정 완료</button>
-            <button id="delete-btn">삭제</button>
+            <button class="delete-btn">삭제</button>
             <div class="checkPW-box2">
               <div>비밀번호를 입력해주세요.</div>
               <div>
-                <input type="password" id="checkPW2"></input>
-                <button id="checkPW-btn2">입력</button>
+                <input type="password" class="checkPW2"></input>
+                <button class="checkPW-btn2">입력</button>
               </div>
             </div>
           </div>
         </div>
         <div class="review-bottom">
-          <p id="star-score">${score}</p>
-          <p id="comment">${comment}</p>
-          <textarea id="re-comment" name="" cols="100" rows="3">${comment}</textarea>
+          <p class="star-score">${score}</p>
+          <p class="comment">${comment}</p>
+          <textarea class="re-comment" name="" cols="100" rows="3">${comment}</textarea>
         </div>
       </li>`;
 

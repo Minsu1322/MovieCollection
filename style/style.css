@@ -1,14 +1,13 @@
 @font-face {
-  font-family: "SejonghospitalBold";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2")
-    format("woff2");
+  font-family: 'SejonghospitalBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 
 * {
   background-color: bisque;
-  font-family: "SejonghospitalBold";
+  font-family: 'SejonghospitalBold';
 }
 
 a {
@@ -34,15 +33,16 @@ a {
   margin: 50px;
   width: 300px;
   text-align: center;
-  font-family: "Jersey 15", sans-serif;
+  font-family: 'Jersey 15', sans-serif;
   font-weight: 150;
   font-style: normal;
-  box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7);
+  box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.3);
   transition: scale 0.45s;
-  background-color: burlywood;
+  background-color: rgb(105, 187, 168);
 }
 .card:hover {
-  scale: 120%;
+  scale: 107%;
+  color: #fff;
 }
 
 img {
@@ -52,6 +52,8 @@ img {
 }
 
 .card h1 {
+  font-family: impact, Charcoal, sans-serif;
+  letter-spacing: 0.6px;
   font-size: 23px;
   background-color: transparent;
 }
@@ -76,5 +78,4 @@ img {
   align-items: center;
   text-align: center;
   font-size: 16px;
-  
 }

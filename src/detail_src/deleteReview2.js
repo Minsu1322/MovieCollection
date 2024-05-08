@@ -8,6 +8,7 @@ import {
   limit,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import { openModal } from "./openModal.js";
+import { getReview } from "./getReview2.js";
 
 export const deleteReview = (movieId) => {
   const db = beginToFirebase();
@@ -16,7 +17,7 @@ export const deleteReview = (movieId) => {
   const $reviewList = document.querySelector(".review-list");
 
   $reviewList.addEventListener("click", async (e) => {
-    if (e.target.id === "delete-btn") {
+    if (e.target.className === "delete-btn") {
       const deleteComment =
         e.target.parentNode.parentNode.nextSibling.nextSibling.children[1]
           .textContent;
@@ -35,8 +36,8 @@ export const deleteReview = (movieId) => {
       $checkPWBox2.style.display = "flex";
 
       const $div = $checkPWBox2.querySelector("div");
-      const $checkPW2 = $checkPWBox2.querySelector("#checkPW2");
-      const $checkPWBtn2 = $checkPWBox2.querySelector("#checkPW-btn2");
+      const $checkPW2 = $checkPWBox2.querySelector(".checkPW2");
+      const $checkPWBtn2 = $checkPWBox2.querySelector(".checkPW-btn2");
 
       $checkPW2.focus();
 
@@ -47,7 +48,7 @@ export const deleteReview = (movieId) => {
           e.target !== $checkPW2 &&
           e.target !== $checkPWBtn2 &&
           e.target !== $checkBtn &&
-          e.target.id !== "delete-btn"
+          e.target.className !== "delete-btn"
         ) {
           $checkPWBox2.style.display = "none";
           $checkPW2.value = "";
@@ -60,7 +61,7 @@ export const deleteReview = (movieId) => {
       const clickPWHandler = async () => {
         if ($checkPW2.value === rightPW) {
           await deleteDoc(deleteData.docs[0].ref);
-          window.location.reload();
+          getReview(movieId);
         } else {
           await openModal("비밀번호가 일치하지 않습니다.");
           $checkPW2.value = "";
