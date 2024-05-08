@@ -36,8 +36,7 @@ export const detailInfo = async () => {
       `https://image.tmdb.org/t/p/w500${movieObj.backdrop_path}`
     );
 
-
-    const poster2Src = document
+  const poster2Src = document
     .getElementById("detail-poster2")
     .getAttribute("src");
 
@@ -46,7 +45,6 @@ export const detailInfo = async () => {
 
   // 배경 이미지 설정
   totalElement.style.backgroundImage = "url('" + poster2Src + "')";
-
 
   // 출연진 정보 추가
   const castApiKey = "23317d8f45886930254ccd062e0ed8a1"; // 출연진 정보 API
@@ -70,7 +68,6 @@ export const detailInfo = async () => {
     .then((response) => {
       // 출연진 정보를 가져와서 HTML에 추가
       const castList = response.cast.slice(0, 6); // 상위 5명의 출연진 정보만 표시
-      console.log(castList);
       const castContainer = document.getElementById("cast-container");
       castList.forEach((actor) => {
         const actorElement = document.createElement("div");
