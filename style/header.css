@@ -84,13 +84,14 @@ body {
 #footerM {
   padding-left: 50px;
   color: white;
-  font-family: "NEXON Lv1 Gothic OTF";
+  /* font-family: "NEXON Lv1 Gothic OTF"; */
+  font-size: 300;
 }
 
 #footerS {
   color: hsl(177, 15%, 74%);
   margin-top: 2px;
-  font-family: "NEXON Lv1 Gothic OTF";
+  /* font-family: "NEXON Lv1 Gothic OTF"; */
 }
 
 footer {
@@ -99,7 +100,7 @@ footer {
   align-content: center;
   height: 120px;
   background-color: #3c8e84;
-  font-family: "NEXON Lv1 Gothic OTF";
+  /* font-family: "NEXON Lv1 Gothic OTF"; */
 }
 
 footer p {
