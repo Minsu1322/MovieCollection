@@ -4,8 +4,10 @@ import {
   addDoc,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import { getCurrentDate } from "./getCurrentDate.js";
+import { openModal } from "./openModal.js";
+import { getReview } from "./getReview2.js";
 
-export const addReview = (movieId) => {
+export const addReview = async (movieId) => {
   const db = beginToFirebase();
 
   const $submitBtn = document.querySelector(".submit-btn");
@@ -23,16 +25,25 @@ export const addReview = (movieId) => {
     let score = $score.value;
     let comment = $comment.value;
 
-    let doc = {
-      username: username,
-      password: password,
-      date: date,
-      score: score,
-      comment: comment,
-    };
-
-    await addDoc(collection(db, `movie${movieId}`), doc);
-
-    window.location.reload();
+    if (!username) {
+      await openModal("이름을 입력해주세요.");
+      $username.focus();
+    } else if (!password) {
+      await openModal("비밀번호를 입력해주세요.");
+      $password.focus();
+    } else if (!comment) {
+      await openModal("리뷰 내용을 작성해주세요.");
+      $comment.focus();
+    } else {
+      let doc = {
+        username: username,
+        password: password,
+        date: date,
+        score: score,
+        comment: comment,
+      };
+      await addDoc(collection(db, `movie${movieId}`), doc);
+      getReview(movieId);
+    }
   });
 };
