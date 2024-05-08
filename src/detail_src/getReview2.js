@@ -13,6 +13,7 @@ export const getReview = async (movieId) => {
     query(collection(db, `movie${movieId}`), orderBy("date", "desc"))
   );
   const $reviewList = document.querySelector(".review-list");
+  $reviewList.innerHTML = "";
 
   docs.forEach((doc) => {
     let row = doc.data();
@@ -32,6 +33,7 @@ export const getReview = async (movieId) => {
             <p id="date">${date}</p>
           </div> 
           <div class="btn-box">
+            <button id="fix-complete-btn">수정 완료</button>
             <button id="fix-btn">수정</button>
             <div class="checkPW-box1">
               <div>비밀번호를 입력해주세요.</div>
@@ -40,7 +42,6 @@ export const getReview = async (movieId) => {
                 <button id="checkPW-btn1">입력</button>
               </div>
             </div>
-            <button id="fix-complete-btn">수정 완료</button>
             <button id="delete-btn">삭제</button>
             <div class="checkPW-box2">
               <div>비밀번호를 입력해주세요.</div>

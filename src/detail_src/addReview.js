@@ -31,13 +31,13 @@ export const addReview = async (movieId) => {
     await openModal("비밀번호를 입력해주세요.");
     reviewPW.focus();
   } else if (reviewInput && reviewInputPW) {
-    await openModal("아이디를 입력해주세요.");
+    await openModal("이름을 입력해주세요.");
     reviewId.focus();
   } else if (reviewInput) {
-    await openModal("아이디와 비밀번호를 입력해주세요.");
+    await openModal("이름과 비밀번호를 입력해주세요.");
     reviewId.focus();
   } else {
-    await openModal("리뷰를 입력해주세요.");
+    await openModal("리뷰 내용을 작성해주세요.");
     reviewText.focus();
   }
 };

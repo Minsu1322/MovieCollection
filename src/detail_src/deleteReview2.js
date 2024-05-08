@@ -8,6 +8,7 @@ import {
   limit,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import { openModal } from "./openModal.js";
+import { getReview } from "./getReview2.js";
 
 export const deleteReview = (movieId) => {
   const db = beginToFirebase();
@@ -60,7 +61,7 @@ export const deleteReview = (movieId) => {
       const clickPWHandler = async () => {
         if ($checkPW2.value === rightPW) {
           await deleteDoc(deleteData.docs[0].ref);
-          window.location.reload();
+          getReview(movieId);
         } else {
           await openModal("비밀번호가 일치하지 않습니다.");
           $checkPW2.value = "";
