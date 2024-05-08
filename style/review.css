@@ -73,6 +73,8 @@
   font-weight: lighter;
   white-space: pre-line;
   line-height: 1.7;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 .userName {
