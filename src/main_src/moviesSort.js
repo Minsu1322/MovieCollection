@@ -2,7 +2,6 @@ import { fetchMovieAPI } from "../all_src/fetchMovieAPI.js";
 
 export const moviesSort = async () => {
   const movieInfo = await fetchMovieAPI();
-  console.log(movieInfo);
   const $movieList = document.querySelector("#movie-list #movie-cards");
   const $sort = document.querySelector("#sort");
 
@@ -32,7 +31,6 @@ export const moviesSort = async () => {
         .map((movie) => movie.release_date)
         .sort()
         .reverse();
-      console.log(dateSortArr);
       for (let i = 0; i < dateSortArr.length; i++) {
         movieInfo.forEach((movie) => {
           if (movie.release_date === dateSortArr[i])
@@ -44,7 +42,6 @@ export const moviesSort = async () => {
         .map((movie) => movie.popularity)
         .sort((a, b) => a - b)
         .reverse();
-      console.log(popularitySortArr);
       for (let i = 0; i < popularitySortArr.length; i++) {
         movieInfo.forEach((movie) => {
           if (movie.popularity === popularitySortArr[i])
