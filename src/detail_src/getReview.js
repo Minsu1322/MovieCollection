@@ -11,10 +11,10 @@ export const getReview = async (movieId) => {
     const score = review["score"];
     let temp_html = `
       <div>
-        <span class="userName">${id}</span> &ensp;
-        <span class="date">${date}</span> &ensp; ${score} <button class="delete-btn" data-id="${id}">삭제</button>
+        <span class="userName">${id}</span> &ensp;<span class="date">${date}</span> &ensp; ${score}<button class="delete-btn" data-id="${id}">삭제</button>
         <br>${text}
-      </div>`;
+     </div>`;
+
     reviewList.innerHTML += temp_html;
   });
 };
