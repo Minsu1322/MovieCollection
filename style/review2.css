@@ -93,15 +93,16 @@
   margin-top: 15px;
 }
 
-#fix-complete-btn {
+.fix-complete-btn {
   display: none;
 }
 
-#delete-btn {
+.delete-btn {
   margin-right: 10px;
 }
 
-.checkPW-box1, .checkPW-box2 {
+.checkPW-box1,
+.checkPW-box2 {
   display: none;
   position: absolute;
   /* float: right; */
@@ -115,21 +116,28 @@
   gap: 5px;
 }
 
-.checkPW-box1 div, .checkPW-box2 div {
+.checkPW-box1 div,
+.checkPW-box2 div {
   background-color: white;
 }
 
-.checkPW-box1 input, .checkPW-box2 input {
+.checkPW-box1 input,
+.checkPW-box2 input {
   background-color: transparent;
 }
 
-#checkPW-btn1, #checkPW-btn2 {
-  background-color: #FF8B66;
+.checkPW-btn1,
+.checkPW-btn2 {
+  background-color: #ff8b66;
   color: white;
-  border: 3px solid #FF8B66;
+  border: 3px solid #ff8b66;
 }
 
-#re-comment {
+.comment {
+  white-space: pre-line;
+}
+
+.re-comment {
   display: none;
   width: 80%;
 }
@@ -148,5 +156,4 @@
   align-items: center;
   text-align: center;
   font-size: 16px;
-  
 }
