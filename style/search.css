@@ -1,3 +1,9 @@
+* {
+  background-color: bisque;
+  font-family: "NEXON Lv1 Gothic OTF";
+  font-weight: 700;
+}
+
 .search-movie {
   font-size: 30px;
   text-align: center;
@@ -7,16 +13,9 @@
   margin-top: 200px;
   margin-bottom: 200px;
   font-size: 50px;
-  font-weight: bold;
 }
 
 #footerM {
   position: relative;
   bottom: 0;
-}
-
-* {
-  background-color: bisque;
-  font-family: "NEXON Lv1 Gothic OTF";
-  font-weight: bold;
 }

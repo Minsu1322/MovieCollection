@@ -1,7 +1,26 @@
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("../assets/images/TTF/NEXONLv1GothicLight.ttf") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("../assets/images/TTF/NEXONLv1GothicRegular.ttf") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("../assets/images/TTF/NEXONLv1GothicBold.ttf") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   background-color: bisque;
-  font-family: "NEXON Lv1 Gothic OTF";
-  /* font-weight: bold; */
 }
 
 a {
@@ -55,7 +74,7 @@ img {
 .card p {
   font-size: 17px;
   background-color: transparent;
-  /* font-weight: bold; */
+  font-weight: bold;
 }
 
 /* 위로 */
