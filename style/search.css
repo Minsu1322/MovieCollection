@@ -10,8 +10,13 @@
   font-weight: bold;
 }
 
-
 #footerM {
-  position : relative;
-  bottom : 0;
+  position: relative;
+  bottom: 0;
+}
+
+* {
+  background-color: bisque;
+  font-family: "NEXON Lv1 Gothic OTF";
+  font-weight: bold;
 }
