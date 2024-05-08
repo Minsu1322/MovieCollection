@@ -57,6 +57,7 @@ export const fixReview = (movieId) => {
           $checkPWBox1.style.display = "none";
           $checkPW1.value = "";
           $checkPWBtn1.removeEventListener("click", clickPWHandler);
+          $checkPW1.removeEventListener("keydown", clickPWHandler, e);
         }
       };
 
@@ -64,27 +65,30 @@ export const fixReview = (movieId) => {
 
       const clickPWHandler = async (e) => {
         e.preventDefault();
-        if ($checkPW1.value === rightPW) {
-          $checkPWBox1.style.display = "none";
-          $checkFixComBtn.style.display = "block";
-          $checkPWBox1.previousSibling.previousSibling.style.display = "none";
-          reviewBottom.children[1].style.display = "none";
-          reviewBottom.children[2].style.display = "flex";
-          const textLength = reviewBottom.children[2].value.length;
-          reviewBottom.children[2].focus();
-          reviewBottom.children[2].setSelectionRange(textLength, textLength);
-          $checkFixComBtn.addEventListener("click", clickFixComBtnHandler);
-          e.stopPropagation();
-        } else {
-          await openModal("비밀번호가 일치하지 않습니다.");
-          $checkPW1.value = "";
-          $checkPW1.focus();
-          document.removeEventListener("click", clickHandler);
+        if(e === undefined || e === null || e.key === "enter") {
+          if ($checkPW1.value === rightPW) {
+            $checkPWBox1.style.display = "none";
+            $checkFixComBtn.style.display = "block";
+            $checkPWBox1.previousSibling.previousSibling.style.display = "none";
+            reviewBottom.children[1].style.display = "none";
+            reviewBottom.children[2].style.display = "flex";
+            const textLength = reviewBottom.children[2].value.length;
+            reviewBottom.children[2].focus();
+            reviewBottom.children[2].setSelectionRange(textLength, textLength);
+            $checkFixComBtn.addEventListener("click", clickFixComBtnHandler);
+            e.stopPropagation();
+          } else {
+            await openModal("비밀번호가 일치하지 않습니다.");
+            $checkPW1.value = "";
+            $checkPW1.focus();
+            document.removeEventListener("click", clickHandler);
+          }
         }
         document.addEventListener("click", clickHandler);
       };
 
       $checkPWBtn1.addEventListener("click", clickPWHandler);
+      $checkPW1.addEventListener("keydown", clickPWHandler, e);
 
       const clickFixComBtnHandler = async () => {
         e.preventDefault();
