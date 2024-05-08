@@ -11,6 +11,6 @@ export const deleteReview = async (reviewInputId, reviewInputPW, movieId) => {
     localStorage.setItem(movieId, JSON.stringify(reviews));
     getReview(movieId);
   } else {
-    openModal("비밀번호가 일치하지 않거나 리뷰가 존재하지 않습니다.");
+    await openModal("비밀번호가 일치하지 않습니다.");
   }
 };
