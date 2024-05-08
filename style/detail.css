@@ -1,6 +1,6 @@
 * {
   background-color: bisque;
-  font-family: 'NEXON Lv1 Gothic OTF';
+  font-family: "NEXON Lv1 Gothic OTF";
 }
 
 a {
@@ -110,7 +110,7 @@ a {
   margin-bottom: 20px;
   letter-spacing: 0.5px;
   height: auto;
-  display:inline-block;
+  display: inline-block;
   /* background-color: rgba(255, 255, 255, 0.318); */
   border-radius: 15px;
   /* background-color: brown; */
@@ -152,8 +152,6 @@ a {
   overflow: hidden;
   border-radius: 0px 13px 13px 0px;
 
-  
-  
   /* object-fit: cover; */
   /* border-radius: 30px;
   border: 5px solid white; */
@@ -167,7 +165,7 @@ a {
   background-color: rgba(255, 255, 255, 0.488);
   border-radius: 15px;
   border: 2px solid white;
-  padding: 15px
+  padding: 15px;
 }
 
 #video-container {
@@ -213,13 +211,12 @@ a {
 }
 
 .actor-image {
-  width: 150px; 
-  height: auto; 
+  width: 150px;
+  height: auto;
   object-position: center;
-  margin: 10px; 
+  margin: 10px;
   border: 2px solid white;
   border-radius: 15px;
-  
 }
 .actor a {
   background-color: transparent;
@@ -235,7 +232,7 @@ a {
   margin-bottom: 3px;
   width: 180px;
   white-space: nowrap;
-  overflow: hidden; 
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .actor-character {
