@@ -2,15 +2,17 @@
 body{
     margin: 0px;
 }
+
 #logo {
     position: sticky;
     top: 0;
     z-index: 10;
+    font-family: "Kanit", sans-serif;
 }
 
 #logo div {
     align-items: center;
-    display: flex
+    display: flex;
 }
 
 #logo #home {
@@ -48,6 +50,7 @@ body{
     font-weight: bold;
     font-size: 20px;
     border-width: 0;
+    font-family: "NEXON Lv1 Gothic OTF";
 }
 
 #search-btn:hover {
@@ -79,7 +82,7 @@ body{
 /* 푸터영역 */
 
 #footerM {
-    margin-left: 50px;
+    padding-left: 50px;
     color: white;
     font-family: 'NEXON Lv1 Gothic OTF';
 }
@@ -88,6 +91,7 @@ body{
     color: hsl(177, 15%, 74%) ;
     margin-top: 2px;
     font-family: 'NEXON Lv1 Gothic OTF';
+    
 }
 
 footer {
@@ -96,15 +100,19 @@ footer {
     align-content: center;
     height: 120PX;
     background-color: #3C8E84;
+    font-family: 'NEXON Lv1 Gothic OTF';
 }
 
 footer p {   
+    padding-left: 50px;
     text-align: left;
     font-size: 12px;
     background-color: #3C8E84;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    color: white;
 }
 
-#footerLogo {          
+/* #footerLogo {          
     display: flex;
     justify-content: right;
     margin-right: 50PX;
@@ -113,7 +121,7 @@ footer p {
     font-family: "Kanit", sans-serif;
     color: white;
     background-color: #3C8E84;
-}
+} */
 
 @font-face {
     font-family: 'NEXON Lv1 Gothic OTF';
