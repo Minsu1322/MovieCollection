@@ -6,6 +6,7 @@ export const searchMovies = async () => {
   let urlParams = new URLSearchParams(window.location.search);
   let searchTerm = urlParams.get("query");
 
+  const $searchInput = document.getElementById("search-section-movie");
   const $searchMovie = document.querySelector(".search-movie");
   const $movieList = document.querySelector("#movie-list #movie-cards");
 
@@ -25,6 +26,8 @@ export const searchMovies = async () => {
       $movieList.innerHTML += temp_html;
     }
   });
+
+  $searchInput.focus();
 
   if ($movieList.innerHTML === "") {
     $movieList.innerHTML += `
