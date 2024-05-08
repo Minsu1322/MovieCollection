@@ -13,29 +13,6 @@ a {
   color: black;
 }
 
-.search-btn {
-  border-radius: 5px;
-  background-color: bisque;
-  padding: 5px;
-  text-align: center;
-  font-weight: bolder;
-}
-
-label {
-  font-size: 20px;
-  font-weight: bolder;
-  margin-right: 10px;
-}
-
-select {
-  float: right;
-  margin-right: 10px;
-  height: 30px;
-  width: 90px;
-  font-size: 15px;
-}
-*/
-
 /* 위로 */
 .arrowBtn {
   width: 40px;
@@ -53,17 +30,6 @@ select {
   font-size: 16px;
 }
 
-footer {
-  margin-top: 40px;
-  height: 15vh;
-  line-height: 5px;
-  text-align: center;
-  align-content: center;
-}
-
-footer p {
-  font-size: 12px;
-}
 /* 상세페이지영역 */
 
 .detail-container {
