@@ -35,14 +35,16 @@ a {
 .detail-container {
   /* border: 3px solid green; */
   border-radius: 20px;
-  margin: 10px 100px;
-  display: grid;
+  margin: auto;
+  margin-top: 20px;
+  place-content: center;
   height: auto;
   width: 1250px;
   position: relative;
   background-position: center;
   background-size: cover;
   overflow: hidden;
+  display: grid;
 }
 
 .blur {
@@ -210,10 +212,14 @@ a {
   transition: scale 0.45s;
   display: flex;
   flex-direction: column;
+  width: 160px;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis;
 }
 
 .actor-image {
-  width: 150px; 
+  width: 135px; 
   height: auto; 
   object-position: center;
   margin: 10px; 
@@ -233,10 +239,10 @@ a {
   font-weight: 500;
   margin: 0; /* 기본 마진 제거 */
   margin-bottom: 3px;
-  width: 180px;
-  white-space: nowrap;
+  /* width: 180px; */
+  /* white-space: nowrap;
   overflow: hidden; 
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; */
 }
 .actor-character {
   margin-bottom: 20px;
