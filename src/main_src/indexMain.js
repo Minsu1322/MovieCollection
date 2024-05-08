@@ -1,9 +1,10 @@
 import { displayMovies } from "./displayMovies.js";
-import { toTheTop } from "./toTheTop.js";
-import { searchMovies } from "./searchMovies.js";
+import { toTheTop } from "../all_src/toTheTop.js";
+import { goToSearchPage } from "../all_src/goToSearchPage.js";
 import { moviesSort } from "./moviesSort.js";
 
 displayMovies();
-searchMovies();
+goToSearchPage();
 toTheTop();
 moviesSort();
+

@@ -1,4 +1,4 @@
-import { fetchMovieAPI } from "./fetchMovieAPI.js";
+import { fetchMovieAPI } from "../all_src/fetchMovieAPI.js";
 
 export const displayMovies = async () => {
   const movieInfo = await fetchMovieAPI();

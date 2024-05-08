@@ -1,19 +1,10 @@
-@font-face {
-  font-family: "SejonghospitalBold";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2")
-    format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
 .review-container {
   margin-top: 20px;
   padding: 20px;
+  border: 3px solid blueviolet;
   display: flex;
   flex-direction: column;
   background-color: #f5d0a9; /* 밝은 주황색 배경색 */
-  font-size: 18px;
-  border-radius: 20px;
 }
 
 #score {
@@ -23,7 +14,7 @@
 #review-form {
   margin-bottom: 20px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .name-pw-box {
@@ -51,43 +42,77 @@
 }
 
 .review-list {
-  padding-top: 20px;
-  background-color: transparent;
-}
-
-
-/* 리뷰리스트 내용 */
-
-.review-list {
+  border: 3px solid blue; /* 회색 경계선 */
   padding-top: 20px;
 }
 
-.review-list div {
-  height: 120px;
+/* .review-list div {
+  height: 100px;
   margin-bottom: 30px;
-  background-color: #8f8ddb;
-  border-radius: 13px;
-  padding: 5px;
-  font-size: 15px;
-  color: white;
-  line-height: 40px;
-  font-weight: lighter;
-}
+  border: 2px solid red;
+} */
 
 .review-list span {
   margin-right: 0px;
 }
 
-
-/* 삭제버튼 */
 .delete-btn {
   background-color: #ff6666; /* 붉은색 */
   color: #fff; /* 흰색 */
   border: none;
   cursor: pointer;
-  padding: 2px;
-  margin-left: 5px;
-  border-radius: 3px;
+}
+
+/* 추가한 코드 */
+.review-box {
+  /* position: relative; */
+  list-style: none;
+  height: 180px;
+  margin-bottom: 30px;
+  border: 2px solid red;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 80%;
+}
+
+.review-box button:hover {
+  cursor: pointer;
+}
+
+.review-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-date-box {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-box {
+  margin-top: 15px;
+}
+
+#fix-complete-btn {
+  display: none;
+}
+
+.checkPW-box1, .checkPW-box2 {
+  display: none;
+  position: absolute;
+  /* float: right; */
+  margin-top: 5px;
+  border: 2px solid greenyellow;
+  border-radius: 10px;
+  flex-direction: column;
+  /* width: 300px; */
+  padding: 15px;
+  gap: 5px;
+}
+
+#re-comment {
+  display: none;
+  width: 80%;
 }
 
 .arrowBtn {

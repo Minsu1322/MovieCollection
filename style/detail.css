@@ -1,5 +1,6 @@
 * {
   background-color: bisque;
+  font-family: 'NEXON Lv1 Gothic OTF';
 }
 
 a {
@@ -10,60 +11,6 @@ a {
   font: inherit;
   text-decoration: none;
   color: black;
-}
-
-/* 헤더영역 */
-#logo div {
-  text-align: center;
-  margin-left: auto;
-  border: 5px dashed;
-}
-
-#logo #home {
-  margin-top: 20px;
-  width: 100%;
-  font-family: "Jersey 15", sans-serif;
-  font-style: normal;
-  font-size: 70px;
-}
-
-/* 검색영역 & 버튼 */
-#search-section div {
-  border-style: none;
-  margin-top: 20px;
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.search-btn {
-  border-radius: 5px;
-  background-color: bisque;
-  padding: 5px;
-  text-align: center;
-  font-weight: bolder;
-}
-
-label {
-  font-size: 20px;
-  font-weight: bolder;
-  margin-right: 10px;
-}
-
-#search-section input {
-  border-radius: 10px;
-  width: 300px;
-  height: 30px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bolder;
-}
-
-select {
-  float: right;
-  margin-right: 10px;
-  height: 30px;
-  width: 90px;
-  font-size: 15px;
 }
 
 /* 위로 */
@@ -83,88 +30,217 @@ select {
   font-size: 16px;
 }
 
-footer {
-  margin-top: 40px;
-  height: 15vh;
-  line-height: 5px;
-  text-align: center;
-  align-content: center;
-}
-
-footer p {
-  font-size: 12px;
-}
+/* 상세페이지영역 */
 
 .detail-container {
-  border: 3px solid green;
-  margin: 10px 200px;
-  display: flex;
-  /* overflow-y: scroll; */
-  height: 800px;
+  /* border: 3px solid green; */
+  border-radius: 20px;
+  margin: 10px 100px;
+  display: grid;
+  height: auto;
+  width: 1250px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }
 
-.detail-container img {
-    width: 400px;
-    /* height: 500px; */
-    margin-right: 20px;
+.blur {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  /* filter: blur(10px); */
+  background-color: rgba(255, 255, 255, 0.164);
+  z-index: 1;
+  padding: 20px;
 }
+
+.blur-effect {
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(10px);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+  place-items: center;
+}
+
 #detail-poster {
-    width: 400px;
-    height: 500px;
-    margin-right: 20px;
+  width: 520px;
+  height: 680px;
+  margin: 10px 60px 10px 60px;
+  border-radius: 30px;
+  border: 10px solid white;
+  vertical-align: middle;
 }
 
-
-.movieinf {
-  display: flex;
-  font-weight: bold;
+.rightpart {
+  height: auto;
+  /* margin-right: 50px; */
+  background-color: rgba(255, 255, 255, 0.363);
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
 }
+
+.rightpart p {
+  background-color: transparent;
+}
+
 #detail-title {
-    font-size: 50px;
+  font-size: 45px;
   font-family: impact, Charcoal, sans-serif;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 20px;
-  
+  letter-spacing: 0.5px;
+  height: auto;
+  display:inline-block;
+  /* background-color: rgba(255, 255, 255, 0.318); */
+  border-radius: 15px;
+  /* background-color: brown; */
 }
-#detail-poster {
-    border-radius: 30px;
-    border: 10px solid white;
-    margin-left: 125px;
-  }
+.litleinfo {
+  display: flex;
+  background-color: transparent;
+  height: 170px;
+}
+
 .movieinfo {
- 
-  font-size:110%;
+  font-family: "Orbit", sans-serif;
+  font-size: 110%;
   font-weight: bold;
-
+  height: 100px;
+  background-color: transparent;
 }
 
-#detail-release,
-#detail-popular {
-  /* margin-left: 3%; */
+.movieclip {
+  display: flex;
+  margin-left: 40px;
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
 }
 
+#clip {
+  margin: 2%;
+  font-family: impact, Charcoal, sans-serif;
+  writing-mode: vertical-lr;
+  text-align: center;
+  font-weight: 800;
+}
+#detail-poster2 {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 0px 13px 13px 0px;
+
+  
+  
+  /* object-fit: cover; */
+  /* border-radius: 30px;
+  border: 5px solid white; */
+}
 #detail-overview {
   font-family: Arial, sans-serif;
   font-size: 110%;
   /* font-weight: bold; */
-  
-  margin-right: 150px;
-  margin-top: 30px;
+  height: 120px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.488);
+  border-radius: 15px;
+  border: 2px solid white;
+  padding: 15px
+}
+
+#video-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  background-color: transparent;
+}
+.cast-box {
+  position: relative;
+  z-index: 1;
+  margin: 5px;
+  background-color: transparent;
+}
+#cast {
+  width: 50px;
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  background-color: transparent;
+}
+#cast-container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  flex-grow: 1;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.378);
+  border-radius: 20px;
+}
+.actor {
+  align-items: center;
+
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.553);
+  box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.3);
+  transition: scale 0.45s;
+  display: flex;
+  flex-direction: column;
+}
+
+.actor-image {
+  width: 150px; 
+  height: auto; 
+  object-position: center;
+  margin: 10px; 
+  border: 2px solid white;
+  border-radius: 15px;
   
 }
-#detail-poster2 {
-    /* position: absolute; */
-    top: 605px;
-    border-radius: 30px;
-    border: 5px solid white;
-  }
-#clip {
-    margin-top: 40px;
-    margin-bottom: 5px;
-    margin-left: 20px;
-    font-size: small;
-    font-weight: bold;
+.actor a {
+  background-color: transparent;
 }
-.movieclip{
-    
+
+.actor-name,
+.actor-character {
+  background-color: transparent;
+  text-align: center;
+  font-size: 13.8px;
+  font-weight: 500;
+  margin: 0; /* 기본 마진 제거 */
+  margin-bottom: 3px;
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+.actor-character {
+  margin-bottom: 20px;
+}
+.actor:hover {
+  scale: 110%;
 }

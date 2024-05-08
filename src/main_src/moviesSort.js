@@ -1,4 +1,4 @@
-import { fetchMovieAPI } from "./fetchMovieAPI.js";
+import { fetchMovieAPI } from "../all_src/fetchMovieAPI.js";
 
 export const moviesSort = async () => {
   const movieInfo = await fetchMovieAPI();
@@ -33,11 +33,11 @@ export const moviesSort = async () => {
     $movieList.innerHTML = sortedMovieInfo
       .map(
         (movie) => `
-        <div class="card">
+        <a href="./detailMovie.html?id=${movie.id}" class="card">
           <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
             <h1>${movie.title}</h1>
             <p>평점: ⭐️${movie.vote_average}</p>
-        </div>
+        </a>
       `
       )
       .join("");
