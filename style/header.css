@@ -1,115 +1,117 @@
 /* 헤더영역 */
-body{
-    margin: 0px;
+body {
+  margin: 0px;
 }
 
 #logo {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    font-family: "Kanit", sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-family: "Kanit", sans-serif;
 }
 
-#logo div {
-    align-items: center;
-    display: flex;
+#logo > div:not(:first-child) {
+  align-items: center;
+  display: flex;
 }
 
-#logo #home {
-    width: 100%;
-    font-family: "Kanit", sans-serif;
-    color: white;
-    font-style: normal;
-    font-size: 66px;
-    background-color: #3C8E84;
+#logo .home {
+  width: 100%;
+  font-family: "Kanit", sans-serif;
+  color: white;
+  font-style: normal;
+  font-size: 66px;
+  background-color: #3c8e84;
 }
 
 #logoimg {
-    width: 120px;
-    background-color: #3C8E84;
-    margin-left: 30px;
-    margin-right: 10px;
-    margin-bottom: -10px;
+  width: 120px;
+  background-color: #3c8e84;
+  margin-left: 30px;
+  margin-right: 10px;
+  margin-bottom: -10px;
 }
 
 #search-section-movie {
-    font-family: "NEXON Lv1 Gothic OTF";
-    text-align: center;
-    height: 37px;
-    width: 200px;
-    border: 0;
-    font-weight: bold;
-    letter-spacing: -1px;
+  font-family: "NEXON Lv1 Gothic OTF";
+  /* text-align: center; */
+  height: 37px;
+  width: 200px;
+  border: 0;
+  font-weight: 400;
+  letter-spacing: -1px;
 }
 
 #search-btn {
-    background-color: #FF8B66;
-    color: white;
-    margin-left: 8px;
-    width: 80px;
-    font-weight: bold;
-    font-size: 20px;
-    border-width: 0;
-    font-family: "NEXON Lv1 Gothic OTF";
+  background-color: #ff8b66;
+  color: white;
+  margin-left: 8px;
+  width: 80px;
+  font-weight: bold;
+  font-size: 20px;
+  border-width: 0;
+  font-family: "NEXON Lv1 Gothic OTF";
 }
 
 #search-btn:hover {
-    border: 2px solid #FF8B66;
-    background-color: bisque;
-    color: black
+  cursor: pointer;
+  border: 2px solid #ff8b66;
+  background-color: bisque;
+  color: black;
 }
 
 #search-section {
-    display: flex;
-    height: 40px;
-    font-weight: bolder;
-    background-color: #3C8E84;
+  display: flex;
+  height: 40px;
+  font-weight: bolder;
+  background-color: #3c8e84;
 }
 
 #sort {
-    font-family: "NEXON Lv1 Gothic OTF";
-    display: flex;
-    margin-left: 10px;
-    margin-right: 50px;
-    height: 40px;
-    width: 130px;
-    border-width: 0;
-    text-align: center;
-    font-weight: bold;
-    font-size: 15px;
+  font-family: "NEXON Lv1 Gothic OTF";
+  display: flex;
+  margin-left: 10px;
+  margin-right: 50px;
+  height: 40px;
+  width: 130px;
+  border-width: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 /* 푸터영역 */
 
 #footerM {
-    padding-left: 50px;
-    color: white;
-    font-family: 'NEXON Lv1 Gothic OTF';
+  padding-left: 50px;
+  color: white;
+  /* font-family: "NEXON Lv1 Gothic OTF"; */
+  font-size: 300;
 }
 
 #footerS {
-    color: hsl(177, 15%, 74%) ;
-    margin-top: 2px;
-    font-family: 'NEXON Lv1 Gothic OTF';
-    
+  color: hsl(177, 15%, 74%);
+  margin-top: 2px;
+  /* font-family: "NEXON Lv1 Gothic OTF"; */
 }
 
 footer {
-    line-height: 5px;
-    text-align: center;
-    align-content: center;
-    height: 120PX;
-    background-color: #3C8E84;
-    font-family: 'NEXON Lv1 Gothic OTF';
+  line-height: 5px;
+  text-align: center;
+  align-content: center;
+  height: 120px;
+  background-color: #3c8e84;
+  /* font-family: "NEXON Lv1 Gothic OTF"; */
 }
 
-footer p {   
-    padding-left: 50px;
-    text-align: left;
-    font-size: 12px;
-    background-color: #3C8E84;
-    font-family: 'NEXON Lv1 Gothic OTF';
-    color: white;
+footer p {
+  padding-left: 50px;
+  text-align: left;
+  font-size: 12px;
+  background-color: #3c8e84;
+  font-family: "NEXON Lv1 Gothic OTF";
+  color: white;
 }
 
 /* #footerLogo {          
@@ -122,10 +124,3 @@ footer p {
     color: white;
     background-color: #3C8E84;
 } */
-
-@font-face {
-    font-family: 'NEXON Lv1 Gothic OTF';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}

@@ -1,14 +1,26 @@
 @font-face {
-  font-family: "SejonghospitalBold";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2")
-    format("woff2");
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("../assets/TTF/NEXONLv1GothicLight.ttf") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("../assets/TTF/NEXONLv1GothicRegular.ttf") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("../assets/TTF/NEXONLv1GothicBold.ttf") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 * {
   background-color: bisque;
-  font-family: "SejonghospitalBold";
 }
 
 a {
@@ -37,12 +49,13 @@ a {
   font-family: "Jersey 15", sans-serif;
   font-weight: 150;
   font-style: normal;
-  box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7);
+  box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.3);
   transition: scale 0.45s;
-  background-color: burlywood;
+  background-color: #ff9e7d;
 }
 .card:hover {
-  scale: 120%;
+  scale: 107%;
+  color: #fff;
 }
 
 img {
@@ -52,6 +65,8 @@ img {
 }
 
 .card h1 {
+  font-family: impact, Charcoal, sans-serif;
+  letter-spacing: 0.6px;
   font-size: 23px;
   background-color: transparent;
 }
@@ -59,6 +74,7 @@ img {
 .card p {
   font-size: 17px;
   background-color: transparent;
+  font-weight: bold;
 }
 
 /* 위로 */
@@ -68,13 +84,16 @@ img {
   border-radius: 50%;
   margin-left: auto;
 
-  display: flex;
+  display: none;
   position: fixed;
   bottom: 30px;
   right: 10px;
-
   align-items: center;
   text-align: center;
   font-size: 16px;
-  
+  transition: display 0.5s ease
+}
+
+.arrowBtn:hover{
+  cursor: pointer;
 }

@@ -3,36 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>6Flix</title>
+
+    <!-- Favicons -->
+    <link href="./assets/images/favicon.png" rel="icon" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="./style/detail.css" />
     <link rel="stylesheet" href="./style/review.css" />
     <link rel="stylesheet" href="./style/header.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./style/modal.css" />
+
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap"
       rel="stylesheet"
     />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
       rel="stylesheet"
     />
 
+    <!-- JavaScript -->
     <script type="module" src="./src/detail_src/detailMain.js"></script>
-    <!-- <script type="module" src="./src/detail_src/detailMain2.js"></script> -->
-    <title>project1</title>
   </head>
 
   <body>
     <!-- 헤더영역 -->
     <header id="logo">
-      <div id="home">
-        <a href="./index.html" id="home">
-          <img id="logoimg" src="images/logo.png" href="./index.html" />
+      <!-- 헤더영역 : 모달 창 -->
+      <div class="modal-box">
+        <p class="message"></p>
+        <button class="check-btn">확인</button>
+      </div>
+
+      <!-- 헤더영역 : 홈 로고 -->
+      <div class="home">
+        <a href="./index.html" class="home">
+          <img
+            id="logoimg"
+            src="./assets/images/logo.png"
+            href="./index.html"
+          />
           6Flix
         </a>
+
+        <!-- 헤더영역 : 홈 로고 : 검색 창 -->
         <form id="search-section">
           <input
             id="search-section-movie"
@@ -55,6 +75,7 @@
             <div class="litleinfo">
               <div class="movieinfo">
                 <p id="detail-average"></p>
+                <p id="detail-genre"></p>
                 <p id="detail-release"></p>
                 <p id="detail-popular"></p>
               </div>
@@ -77,8 +98,9 @@
 
     <!-- 리뷰영역 -->
     <section class="review-container">
-      <form id="review-form">
-        <div class="name-pw-box">
+      <!-- 리뷰영역 : 리뷰작성 -->
+      <div id="review-form">
+        <form class="name-pw-box">
           <p>작성자&nbsp;&nbsp;<input id="reviewId" type="text" /></p>
           <p>비밀번호&nbsp;&nbsp;<input id="reviewPW" type="password" /></p>
           <p>
@@ -91,14 +113,14 @@
               <option value="⭐️">⭐️</option>
             </select>
           </p>
-        </div>
-        <div class="comment-box">
+        </form>
+        <form class="comment-box">
           <textarea id="review-text" name="" cols="60" rows="8"></textarea>
           <button class="submit-btn">작성</button>
-        </div>
-      </form>
+        </form>
+      </div>
 
-      <!-- 리뷰리스트 -->
+      <!-- 리뷰영역 : 리뷰리스트 -->
       <div class="review-list"></div>
     </section>
 
