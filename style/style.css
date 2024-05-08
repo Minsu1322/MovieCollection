@@ -1,13 +1,26 @@
 @font-face {
-  font-family: 'SejonghospitalBold';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2') format('woff2');
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("../assets/TTF/NEXONLv1GothicLight.ttf") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("../assets/TTF/NEXONLv1GothicRegular.ttf") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("../assets/TTF/NEXONLv1GothicBold.ttf") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 * {
   background-color: bisque;
-  font-family: 'SejonghospitalBold';
 }
 
 a {
@@ -33,12 +46,12 @@ a {
   margin: 50px;
   width: 300px;
   text-align: center;
-  font-family: 'Jersey 15', sans-serif;
+  font-family: "Jersey 15", sans-serif;
   font-weight: 150;
   font-style: normal;
   box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.3);
   transition: scale 0.45s;
-  background-color: rgb(105, 187, 168);
+  background-color: #ff9e7d;
 }
 .card:hover {
   scale: 107%;
@@ -61,6 +74,7 @@ img {
 .card p {
   font-size: 17px;
   background-color: transparent;
+  font-weight: bold;
 }
 
 /* 위로 */

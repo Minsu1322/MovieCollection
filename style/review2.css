@@ -56,10 +56,10 @@
   margin-right: 0px;
 }
 
-.delete-btn {
+.delete-btn, .fix-complete-btn, .fix-btn {
   background-color: #ff6666; /* 붉은색 */
   color: #fff; /* 흰색 */
-  border: none;
+  border: 3px solid #ff6666;
   cursor: pointer;
 }
 

@@ -211,9 +211,6 @@ a {
   display: flex;
   flex-direction: column;
   width: 160px;
-  white-space: nowrap;
-  overflow: hidden; 
-  text-overflow: ellipsis;
 }
 
 .actor-image {
@@ -236,10 +233,10 @@ a {
   font-weight: 500;
   margin: 0; /* 기본 마진 제거 */
   margin-bottom: 3px;
-  /* width: 180px; */
-  /* white-space: nowrap;
+  width: 130px;
+  white-space: nowrap;
   overflow: hidden; 
-  text-overflow: ellipsis; */
+  text-overflow: ellipsis;
 
 }
 .actor-character {

@@ -7,7 +7,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
 }
 
 #logo > div:not(:first-child) {
@@ -15,9 +15,9 @@ body {
   display: flex;
 }
 
-#logo #home {
+#logo .home {
   width: 100%;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   color: white;
   font-style: normal;
   font-size: 66px;
@@ -33,12 +33,12 @@ body {
 }
 
 #search-section-movie {
-  font-family: 'NEXON Lv1 Gothic OTF';
+  font-family: "NEXON Lv1 Gothic OTF";
   /* text-align: center; */
   height: 37px;
   width: 200px;
   border: 0;
-  font-weight: bold;
+  font-weight: 400;
   letter-spacing: -1px;
 }
 
@@ -50,7 +50,7 @@ body {
   font-weight: bold;
   font-size: 20px;
   border-width: 0;
-  font-family: 'NEXON Lv1 Gothic OTF';
+  font-family: "NEXON Lv1 Gothic OTF";
 }
 
 #search-btn:hover {
@@ -67,7 +67,7 @@ body {
 }
 
 #sort {
-  font-family: 'NEXON Lv1 Gothic OTF';
+  font-family: "NEXON Lv1 Gothic OTF";
   display: flex;
   margin-left: 10px;
   margin-right: 50px;
@@ -84,13 +84,13 @@ body {
 #footerM {
   padding-left: 50px;
   color: white;
-  font-family: 'NEXON Lv1 Gothic OTF';
+  font-family: "NEXON Lv1 Gothic OTF";
 }
 
 #footerS {
   color: hsl(177, 15%, 74%);
   margin-top: 2px;
-  font-family: 'NEXON Lv1 Gothic OTF';
+  font-family: "NEXON Lv1 Gothic OTF";
 }
 
 footer {
@@ -99,7 +99,7 @@ footer {
   align-content: center;
   height: 120px;
   background-color: #3c8e84;
-  font-family: 'NEXON Lv1 Gothic OTF';
+  font-family: "NEXON Lv1 Gothic OTF";
 }
 
 footer p {
@@ -107,7 +107,7 @@ footer p {
   text-align: left;
   font-size: 12px;
   background-color: #3c8e84;
-  font-family: 'NEXON Lv1 Gothic OTF';
+  font-family: "NEXON Lv1 Gothic OTF";
   color: white;
 }
 
@@ -121,10 +121,3 @@ footer p {
     color: white;
     background-color: #3C8E84;
 } */
-
-@font-face {
-  font-family: 'NEXON Lv1 Gothic OTF';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
