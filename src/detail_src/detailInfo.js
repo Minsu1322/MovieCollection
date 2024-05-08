@@ -1,40 +1,56 @@
 import { fetchMovieAPI } from "../all_src/fetchMovieAPI.js";
+import { fetchGenreAPI } from "./fetchGenreAPI.js";
 
 export const detailInfo = async () => {
   const movieInfo = await fetchMovieAPI();
+  const movieGenre = await fetchGenreAPI();
 
   let urlParams = new URLSearchParams(window.location.search);
   let movieId = urlParams.get("id");
 
-  let movieObj = movieInfo.reduce((obj, movie) => {
-    if (movie.id === Number(movieId)) obj = movie;
+  let genreArr = movieInfo
+    .map((movie) => movie.genre_ids)
+    .map((arr) => {
+      return arr.map((genreId) => {
+        movieGenre.forEach((genreObj) => {
+          if (genreObj.id === genreId) {
+            genreId = genreObj.name;
+          }
+        });
+        return genreId;
+      });
+    });
+
+  let movieIdx = null;
+
+  let movieObj = movieInfo.reduce((obj, movie, idx) => {
+    if (movie.id === Number(movieId)) {
+      obj = movie;
+      movieIdx = idx;
+    }
     return obj;
   }, {});
 
-  document
-    .getElementById("detail-poster")
-    .setAttribute(
-      "src",
-      `https://image.tmdb.org/t/p/w500${movieObj.poster_path}`
-    );
-  document.getElementById("detail-title").innerHTML =
-    movieObj.title.toUpperCase();
-  document.getElementById(
-    "detail-release"
-  ).innerHTML = `개봉일: 🎬${movieObj.release_date}`;
-  document.getElementById(
-    "detail-average"
-  ).innerHTML = `평점: ⭐️${movieObj.vote_average.toFixed(2)}`;
-  document.getElementById(
-    "detail-popular"
-  ).innerHTML = `인기도: 💖${movieObj.popularity}`;
-  document.getElementById("detail-overview").innerHTML = movieObj.overview;
-  document
-    .getElementById("detail-poster2")
-    .setAttribute(
-      "src",
-      `https://image.tmdb.org/t/p/w500${movieObj.backdrop_path}`
-    );
+  const $detailPoster = document.getElementById("detail-poster");
+  const $detailTitle = document.getElementById("detail-title");
+  const $detailRelease = document.getElementById("detail-release");
+  const $detailGenre = document.getElementById("detail-genre");
+  const $detailAverage = document.getElementById("detail-average");
+  const $detailPopular = document.getElementById("detail-popular");
+  const $detailOverview = document.getElementById("detail-overview");
+  const $detailPoster2 = document.getElementById("detail-poster2");
+
+  $detailPoster.setAttribute("src", `https://image.tmdb.org/t/p/w500${movieObj.poster_path}`);
+  $detailTitle.innerHTML = movieObj.title.toUpperCase();
+  $detailRelease.innerHTML = `개봉일: 🎬${movieObj.release_date}`;
+  $detailGenre.innerHTML = "장르: 🎞️";
+  genreArr[movieIdx].forEach((ele, idx) => {
+    $detailGenre.innerHTML += (idx !== genreArr[movieIdx].length - 1) ? `${ele}, ` : `${ele}`;
+  });
+  $detailAverage.innerHTML = `평점: ⭐️${movieObj.vote_average.toFixed(2)}`;
+  $detailPopular.innerHTML = `인기도: 💖${movieObj.popularity}`;
+  $detailOverview.innerHTML = movieObj.overview;
+  $detailPoster2.setAttribute("src", `https://image.tmdb.org/t/p/w500${movieObj.backdrop_path}`);
 
   const poster2Src = document
     .getElementById("detail-poster2")
