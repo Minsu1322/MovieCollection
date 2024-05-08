@@ -1,7 +1,6 @@
 * {
   background-color: bisque;
   font-family: "NEXON Lv1 Gothic OTF";
-  font-weight: 700;
 }
 
 .search-movie {
@@ -13,9 +12,4 @@
   margin-top: 200px;
   margin-bottom: 200px;
   font-size: 50px;
-}
-
-#footerM {
-  position: relative;
-  bottom: 0;
 }

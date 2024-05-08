@@ -17,7 +17,7 @@ export const searchMovies = async () => {
     const title = movie.title.toLowerCase();
     if (title.includes(searchTerm.toLowerCase())) {
       let temp_html = `
-        <a href="./detailMovie2.html?id=${movie.id}" class="card">
+        <a href="./detailMovie.html?id=${movie.id}" class="card">
           <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
             <h1>${movie.title}</h1>
             <p>평점: ⭐️${movie.vote_average}</p>
