@@ -12,6 +12,12 @@ import { openModal } from "./openModal.js";
 import { getReview } from "./getReview2.js";
 
 export const fixReview = (movieId) => {
+  const $home = document.querySelector("#home");
+  $home.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "./index.html";
+  })
+
   const db = beginToFirebase();
 
   const $checkBtn = document.querySelector(".check-btn");
