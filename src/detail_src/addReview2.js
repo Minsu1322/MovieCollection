@@ -42,11 +42,13 @@ export const addReview = async (movieId) => {
         score: score,
         comment: comment,
       };
-      username = "";
-      password = "";
-      comment = "";
+      
       await addDoc(collection(db, `movie${movieId}`), doc);
       getReview(movieId);
+      console.log("aa")
+      reviewId = "";
+      password = "";
+      comment = "";
     }
   });
 };
