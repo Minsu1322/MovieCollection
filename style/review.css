@@ -116,7 +116,7 @@
   border-radius: 50%;
   margin-left: auto;
 
-  display: flex;
+  display: none;
   position: fixed;
   bottom: 30px;
   right: 10px;

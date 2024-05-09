@@ -20,7 +20,7 @@ a {
   border-radius: 50%;
   margin-left: auto;
 
-  display: flex;
+  display: none;
   position: sticky;
   bottom: 20px;
   right: 10px;
