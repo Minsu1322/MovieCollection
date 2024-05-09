@@ -69,11 +69,11 @@ export const fixReview = (movieId) => {
             $checkPWBox1.style.display = "none";
             $checkFixComBtn.style.display = "inline-block";
             $checkPWBox1.previousSibling.previousSibling.style.display = "none";
-            reviewBottom.children[1].style.display = "none";
-            reviewBottom.children[2].style.display = "flex";
-            const textLength = reviewBottom.children[2].value.length;
-            reviewBottom.children[2].focus();
-            reviewBottom.children[2].setSelectionRange(textLength, textLength);
+            reviewBottom.children[0].style.display = "none";
+            reviewBottom.children[1].style.display = "flex";
+            const textLength = reviewBottom.children[1].value.length;
+            reviewBottom.children[1].focus();
+            reviewBottom.children[1].setSelectionRange(textLength, textLength);
             $checkFixComBtn.addEventListener("click", clickFixComBtnHandler);
           } else {
             await openModal("비밀번호가 일치하지 않습니다.");
@@ -89,7 +89,7 @@ export const fixReview = (movieId) => {
       // $checkPW1.addEventListener("keydown", clickPWHandler, e);
 
       const clickFixComBtnHandler = async () => {
-        let newComment = reviewBottom.children[2].value;
+        let newComment = reviewBottom.children[1].value;
         let date = getCurrentDate();
         await updateDoc(fixData.docs[0].ref, {
           date: date,
