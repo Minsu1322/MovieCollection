@@ -9,9 +9,7 @@ export const displayMovies = async () => {
       (movie) => `
 
       <a href="./detailMovie.html?id=${movie.id}" class="card">
-        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${
-        movie.title
-      }">
+        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
           <h1>${movie.title}</h1>
           <p>평점: ⭐️${movie.vote_average.toFixed(2)}</p>
       </a>
