@@ -55,7 +55,10 @@
   cursor: pointer;
   padding: 2px;
   margin-left: 650px;
-  border-radius: 3px;
+  border-radius: 10px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 .userName {
@@ -95,6 +98,7 @@
   font-weight: lighter;
   white-space: pre-line;
   line-height: 1.7;
+  position: relative;
 }
 
 .date {
@@ -105,7 +109,6 @@
 .review-list span {
   margin-right: 0px;
 }
-
 
 .arrowBtn {
   width: 40px;
@@ -122,3 +125,4 @@
   text-align: center;
   font-size: 16px;
 }
+
