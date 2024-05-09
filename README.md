@@ -3,9 +3,22 @@
 [영화 사이트 바로가기](https://alstn-movie1.netlify.app/)
 
 ## 주의사항: 파일 경로 바꿔야 되는 파일
-- [displayMovies.js](./src/main_src/displayMovies.js)
-- [moviesSort.js](./src/main_src/moviesSort.js)
-- [searchMovies.js](./src/all_src/searchMovies.js)
+- 영화 리뷰 작성하는 부분을 **로컬 스토리지 기반**/**파이어베이스 기반** 두 가지 방법으로 구현하였다.
+
+- 아래 세 파일의 경로를 모두 동일하게 바꿔줘야 한다.
+  - [displayMovies.js](./src/main_src/displayMovies.js)
+  - [moviesSort.js](./src/main_src/moviesSort.js)
+  - [searchMovies.js](./src/all_src/searchMovies.js)
+
+- 로컬 스토리지 기반: `detailMovie`
+  ```html
+  <a href="./detailMovie.html?id=${movie.id}" class="card">
+  ```
+
+- 파이어베이스 기반: `detailMovie2` (뒤에 숫자 '2'가 붙음)
+  ```html
+  <a href="./detailMovie2.html?id=${movie.id}" class="card">
+  ```
 
 ## 0. 헤더, 푸터
 

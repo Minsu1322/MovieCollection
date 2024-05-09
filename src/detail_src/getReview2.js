@@ -31,6 +31,7 @@ export const getReview = async (movieId) => {
           <div class="name-date-box">
             <p class="username">${username}</p>
             <p class="date">${date}</p>
+            <p class="star-score">${score}</p>
           </div> 
           <div class="btn-box">
             <button class="fix-complete-btn">수정 완료</button>
@@ -53,7 +54,6 @@ export const getReview = async (movieId) => {
           </div>
         </div>
         <div class="review-bottom">
-          <p class="star-score">${score}</p>
           <p class="comment">${comment}</p>
           <textarea class="re-comment" name="" cols="100" rows="3">${comment}</textarea>
         </div>
