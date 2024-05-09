@@ -12,8 +12,7 @@ export const getReview = async (movieId) => {
     let temp_html = `
       <div>
         <p id="unserInfo"><span id="userName">${id}</span>&ensp;<span class="date">${date}</span>&ensp;${score}</span></p> 
-        <p id="text">${text}</p>
-        <button class="delete-btn" data-id="${id}">삭제</button>
+        <p id="text">${text}</p><button class="delete-btn" data-id="${id}">삭제</button>
      </div>`;
 
     reviewList.innerHTML += temp_html;
