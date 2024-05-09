@@ -46,9 +46,9 @@ export const addReview = async (movieId) => {
       await addDoc(collection(db, `movie${movieId}`), doc);
       getReview(movieId);
       console.log("aa")
-      reviewId = "";
-      password = "";
-      comment = "";
+      $username.value = "";
+      $password.value = "";
+      $comment.value = "";
     }
   });
 };
