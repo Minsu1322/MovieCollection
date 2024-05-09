@@ -27,6 +27,11 @@ export const addReview = async (movieId) => {
     reviews.push(userReview);
     localStorage.setItem(movieId, JSON.stringify(reviews));
     getReview(movieId);
+    console.log("aaa")
+    reviewId.value = ""
+    reviewPW.value = ""
+    reviewText.value = ""
+    
   } else if (reviewInput && reviewInputId) {
     await openModal("비밀번호를 입력해주세요.");
     reviewPW.focus();

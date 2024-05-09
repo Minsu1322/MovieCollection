@@ -54,6 +54,7 @@ body {
 }
 
 #search-btn:hover {
+  cursor: pointer;
   border: 2px solid #ff8b66;
   background-color: bisque;
   color: black;
@@ -77,6 +78,7 @@ body {
   text-align: center;
   font-weight: bold;
   font-size: 15px;
+  cursor: pointer;
 }
 
 /* 푸터영역 */
